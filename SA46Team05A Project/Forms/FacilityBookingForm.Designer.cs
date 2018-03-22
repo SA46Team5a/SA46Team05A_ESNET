@@ -44,6 +44,10 @@
             this.EndTime_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // Back_Button
+            // 
+            this.Back_Button.Location = new System.Drawing.Point(568, 360);
+            // 
             // Bookingform_Label
             // 
             this.Bookingform_Label.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,7 +180,7 @@
             this.EndTime_Label.TabIndex = 16;
             this.EndTime_Label.Text = "End Time";
             // 
-            // Booking_Form
+            // FacilityBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,8 +199,23 @@
             this.Controls.Add(this.Facility_Name_ComboBox);
             this.Controls.Add(this.Facility_Name_Label);
             this.Controls.Add(this.Bookingform_Label);
-            this.Name = "Booking_Form";
+            this.Name = "FacilityBookingForm";
             this.Text = "Booking_Form";
+            this.Controls.SetChildIndex(this.Bookingform_Label, 0);
+            this.Controls.SetChildIndex(this.Facility_Name_Label, 0);
+            this.Controls.SetChildIndex(this.Facility_Name_ComboBox, 0);
+            this.Controls.SetChildIndex(this.Book_Button, 0);
+            this.Controls.SetChildIndex(this.Booking_Form_Cancel_Button, 0);
+            this.Controls.SetChildIndex(this.MemberID_Label, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.MemberSearch_Button, 0);
+            this.Controls.SetChildIndex(this.MemberName_TextBox, 0);
+            this.Controls.SetChildIndex(this.MemberName_Label, 0);
+            this.Controls.SetChildIndex(this.StartTime_ComboBox, 0);
+            this.Controls.SetChildIndex(this.EndTime_ComboBox, 0);
+            this.Controls.SetChildIndex(this.StartTime_Label, 0);
+            this.Controls.SetChildIndex(this.EndTime_Label, 0);
+            this.Controls.SetChildIndex(this.Back_Button, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

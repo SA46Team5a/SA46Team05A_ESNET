@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BaseLibrary;
 using SA46Team05A_Project.Entities;
 
 namespace SA46Team05A_Project.Forms
 {
-    public partial class FacilityBookingForm : Form
+    public partial class FacilityBookingForm: BaseForm 
     {
-        public FacilityBookingForm() 
+        public FacilityBookingForm(Form caller): base(caller)
         {
             InitializeComponent();
         }
