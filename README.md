@@ -22,4 +22,13 @@ To meet the objective, the team has decided to make simplifying assumptions on t
 ### User identification
 - Staff are using company-issued desktops and have to log in with their issued accounts.
 
+## TODO
+- Add search/query forms for customers/bookings
+- Standardize size and format on the following controls
+  - Font, font size, height
+    - Label used as form title
+    - Label used as field title
+    - TextBox   
+    - ComboBox
+
 ## Known Bugs
