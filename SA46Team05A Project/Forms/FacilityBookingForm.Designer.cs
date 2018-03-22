@@ -46,7 +46,7 @@
             // 
             // Back_Button
             // 
-            this.Back_Button.Location = new System.Drawing.Point(568, 360);
+            this.Back_Button.Location = new System.Drawing.Point(592, 360);
             // 
             // Bookingform_Label
             // 
