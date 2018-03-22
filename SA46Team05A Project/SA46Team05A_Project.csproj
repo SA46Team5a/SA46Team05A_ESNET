@@ -54,35 +54,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Availability.cs">
-      <DependentUpon>SportsFacBooking.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Facility.cs">
-      <DependentUpon>SportsFacBooking.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Member.cs">
-      <DependentUpon>SportsFacBooking.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\SportsFacBooking.Context.cs">
+    <Compile Include="Entities\SportsFacBookingModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SportsFacBooking.Context.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\SportsFacBooking.cs">
+    <Compile Include="Entities\SportsFacBookingModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SportsFacBooking.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\SportsFacBooking.Designer.cs">
+    <Compile Include="Entities\SportsFacBookingModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SportsFacBooking.edmx</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Transaction.cs">
-      <DependentUpon>SportsFacBooking.tt</DependentUpon>
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AppMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppMainMenu.Designer.cs">
+      <DependentUpon>AppMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,6 +98,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Entities\SportsFacBookingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SportsFacBookingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\SportsFacBookingModel.edmx.diagram">
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,13 +115,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="Entities\SportsFacBooking.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SportsFacBooking.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Entities\SportsFacBooking.edmx.diagram">
-      <DependentUpon>SportsFacBooking.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -117,20 +123,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Entities\SportsFacBooking.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SportsFacBooking.edmx</DependentUpon>
-      <LastGenOutput>SportsFacBooking.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Entities\SportsFacBooking.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SportsFacBooking.edmx</DependentUpon>
-      <LastGenOutput>SportsFacBooking.cs</LastGenOutput>
-    </Content>
+    <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\" />
-    <Folder Include="Reports\" />
+    <Content Include="Entities\SportsFacBookingModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+      <LastGenOutput>SportsFacBookingModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\SportsFacBookingModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+      <LastGenOutput>SportsFacBookingModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
