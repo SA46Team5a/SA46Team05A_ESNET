@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SA46Team05A_Project.Entities
+namespace BaseLibrary.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -30,7 +30,7 @@ namespace SA46Team05A_Project.Entities
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Availability> Availability { get; set; }
-        public virtual Facility Facilities { get; set; }
-        public virtual Member Members { get; set; }
+        public virtual Facility Facility { get; set; }
+        public virtual Member Member { get; set; }
     }
 }

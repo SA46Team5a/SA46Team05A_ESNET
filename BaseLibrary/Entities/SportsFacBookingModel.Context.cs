@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SA46Team05A_Project.Entities
+namespace BaseLibrary.Entities
 {
     using System;
     using System.Data.Entity;

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Jack\Projects\SA46Team05A Solution\SA46Team05A Project\Entities\SportsFacBookingModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Jack\Projects\SA46Team05A Solution\BaseLibrary\Entities\SportsFacBookingModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
