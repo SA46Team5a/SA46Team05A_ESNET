@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SportsFacBookingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SportsFacBookingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Availability">
           <Key>
             <PropertyRef Name="FacilityID" />
@@ -56,7 +56,7 @@
           <Property Name="EndTime" Type="smallint" Nullable="false" />
           <Property Name="Cancelled" Type="bit" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Availabil__Facil__43D61337">
+        <Association Name="FK__Availabil__Facil__55BFB948">
           <End Role="Facilities" Type="Self.Facilities" Multiplicity="1" />
           <End Role="Availability" Type="Self.Availability" Multiplicity="*" />
           <ReferentialConstraint>
@@ -68,7 +68,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Availabil__Membe__44CA3770">
+        <Association Name="FK__Availabil__Membe__56B3DD81">
           <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
           <End Role="Availability" Type="Self.Availability" Multiplicity="*" />
           <ReferentialConstraint>
@@ -80,7 +80,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Availabil__Trans__45BE5BA9">
+        <Association Name="FK__Availabil__Trans__57A801BA">
           <End Role="Transactions" Type="Self.Transactions" Multiplicity="0..1" />
           <End Role="Availability" Type="Self.Availability" Multiplicity="*" />
           <ReferentialConstraint>
@@ -92,7 +92,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Transacti__Facil__3E1D39E1">
+        <Association Name="FK__Transacti__Facil__5006DFF2">
           <End Role="Facilities" Type="Self.Facilities" Multiplicity="1" />
           <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
           <ReferentialConstraint>
@@ -104,7 +104,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Transacti__Membe__3F115E1A">
+        <Association Name="FK__Transacti__Membe__50FB042B">
           <End Role="Members" Type="Self.Members" Multiplicity="1" />
           <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,29 +121,28 @@
           <EntitySet Name="Facilities" EntityType="Self.Facilities" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Availabil__Facil__43D61337" Association="Self.FK__Availabil__Facil__43D61337">
+          <AssociationSet Name="FK__Availabil__Facil__55BFB948" Association="Self.FK__Availabil__Facil__55BFB948">
             <End Role="Facilities" EntitySet="Facilities" />
             <End Role="Availability" EntitySet="Availability" />
           </AssociationSet>
-          <AssociationSet Name="FK__Availabil__Membe__44CA3770" Association="Self.FK__Availabil__Membe__44CA3770">
+          <AssociationSet Name="FK__Availabil__Membe__56B3DD81" Association="Self.FK__Availabil__Membe__56B3DD81">
             <End Role="Members" EntitySet="Members" />
             <End Role="Availability" EntitySet="Availability" />
           </AssociationSet>
-          <AssociationSet Name="FK__Availabil__Trans__45BE5BA9" Association="Self.FK__Availabil__Trans__45BE5BA9">
+          <AssociationSet Name="FK__Availabil__Trans__57A801BA" Association="Self.FK__Availabil__Trans__57A801BA">
             <End Role="Transactions" EntitySet="Transactions" />
             <End Role="Availability" EntitySet="Availability" />
           </AssociationSet>
-          <AssociationSet Name="FK__Transacti__Facil__3E1D39E1" Association="Self.FK__Transacti__Facil__3E1D39E1">
+          <AssociationSet Name="FK__Transacti__Facil__5006DFF2" Association="Self.FK__Transacti__Facil__5006DFF2">
             <End Role="Facilities" EntitySet="Facilities" />
             <End Role="Transactions" EntitySet="Transactions" />
           </AssociationSet>
-          <AssociationSet Name="FK__Transacti__Membe__3F115E1A" Association="Self.FK__Transacti__Membe__3F115E1A">
+          <AssociationSet Name="FK__Transacti__Membe__50FB042B" Association="Self.FK__Transacti__Membe__50FB042B">
             <End Role="Members" EntitySet="Members" />
             <End Role="Transactions" EntitySet="Transactions" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SportsFacBookingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

@@ -45,6 +45,33 @@
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Entities\Availability.cs">
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Facility.cs">
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Member.cs">
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SportsFacBookingModel.Context.cs">
+      <DependentUpon>SportsFacBookingModel.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\SportsFacBookingModel.cs">
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\SportsFacBookingModel.Designer.cs">
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\Transaction.cs">
+      <DependentUpon>SportsFacBookingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
@@ -54,6 +81,29 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Entities\SportsFacBookingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SportsFacBookingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\SportsFacBookingModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+      <LastGenOutput>SportsFacBookingModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\SportsFacBookingModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+      <LastGenOutput>SportsFacBookingModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\SportsFacBookingModel.edmx.diagram">
+      <DependentUpon>SportsFacBookingModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
