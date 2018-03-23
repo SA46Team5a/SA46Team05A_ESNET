@@ -12,7 +12,7 @@ namespace BaseLibrary
 {
     public partial class BaseForm : Form
     {
-        Form caller;
+        protected Form caller;
 
         public BaseForm()
         {
