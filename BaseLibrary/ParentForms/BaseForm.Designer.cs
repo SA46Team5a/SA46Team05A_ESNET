@@ -1,4 +1,4 @@
-﻿namespace BaseLibrary
+﻿namespace BaseLibrary.ParentForms
 {
     partial class BaseForm
     {

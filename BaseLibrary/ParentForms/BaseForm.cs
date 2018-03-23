@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BaseLibrary
+namespace BaseLibrary.ParentForms
 {
     public partial class BaseForm : Form
     {
