@@ -43,6 +43,7 @@
             this.Back_Button.TabIndex = 0;
             this.Back_Button.Text = "Back";
             this.Back_Button.UseVisualStyleBackColor = true;
+            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
             // 
             // statusStrip1
             // 

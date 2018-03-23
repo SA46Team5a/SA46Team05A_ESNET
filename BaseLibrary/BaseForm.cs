@@ -23,5 +23,11 @@ namespace BaseLibrary
         {
             this.caller = caller;
         }
+
+        private void Back_Button_Click(object sender, EventArgs e)
+        {
+            caller.Show();
+            Dispose();
+        }
     }
 }
