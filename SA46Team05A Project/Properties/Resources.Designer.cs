@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SA46Team05A_Project.Properties
+namespace BaseLibrary.Properties
 {
 
 
