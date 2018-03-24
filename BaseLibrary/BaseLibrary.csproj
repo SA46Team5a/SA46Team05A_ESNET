@@ -84,20 +84,11 @@
     <Compile Include="ParentForms\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParentForms\BaseFacilityForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ParentForms\BaseFacilityForm.Designer.cs">
-      <DependentUpon>BaseFacilityForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ParentForms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParentForms\BaseFacilityForm.resx">
-      <DependentUpon>BaseFacilityForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

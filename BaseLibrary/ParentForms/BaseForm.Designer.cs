@@ -80,6 +80,6 @@
 
         protected System.Windows.Forms.Button Back_Button;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel Status;
+        protected System.Windows.Forms.ToolStripStatusLabel Status;
     }
 }
