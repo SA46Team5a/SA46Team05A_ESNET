@@ -28,194 +28,276 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Bookingform_Label = new System.Windows.Forms.Label();
+            this.Title_Label = new System.Windows.Forms.Label();
             this.Facility_Name_Label = new System.Windows.Forms.Label();
-            this.Facility_Name_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Book_Button = new System.Windows.Forms.Button();
-            this.Booking_Form_Cancel_Button = new System.Windows.Forms.Button();
-            this.MemberID_Label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.MemberSearch_Button = new System.Windows.Forms.Button();
-            this.MemberName_TextBox = new System.Windows.Forms.TextBox();
-            this.MemberName_Label = new System.Windows.Forms.Label();
-            this.StartTime_ComboBox = new System.Windows.Forms.ComboBox();
-            this.EndTime_ComboBox = new System.Windows.Forms.ComboBox();
-            this.StartTime_Label = new System.Windows.Forms.Label();
-            this.EndTime_Label = new System.Windows.Forms.Label();
+            this.Facility_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Base_DataGridView = new System.Windows.Forms.DataGridView();
+            this.Date_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Timeslot_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Member_Name_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Booked_Column = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Available_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Member_ID_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tomorrow_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Today_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Booking_Button = new System.Windows.Forms.Button();
+            this.Member_Name_Label = new System.Windows.Forms.Label();
+            this.Member_ID_Label = new System.Windows.Forms.Label();
+            this.Member_Name_TextBox = new System.Windows.Forms.TextBox();
+            this.Member_ID_TextBox = new System.Windows.Forms.TextBox();
+            this.Member_Query_Button = new System.Windows.Forms.Button();
+            this.Booked_Label = new System.Windows.Forms.Label();
+            this.Not_Available_Label = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Base_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Back_Button
             // 
-            this.Back_Button.Location = new System.Drawing.Point(592, 360);
+            this.Back_Button.Location = new System.Drawing.Point(408, 576);
+            this.Back_Button.Size = new System.Drawing.Size(75, 30);
             // 
-            // Bookingform_Label
+            // Title_Label
             // 
-            this.Bookingform_Label.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookingform_Label.Location = new System.Drawing.Point(227, 30);
-            this.Bookingform_Label.Name = "Bookingform_Label";
-            this.Bookingform_Label.Size = new System.Drawing.Size(237, 43);
-            this.Bookingform_Label.TabIndex = 0;
-            this.Bookingform_Label.Text = "Book Facility";
-            this.Bookingform_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Title_Label.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Title_Label.Location = new System.Drawing.Point(200, 32);
+            this.Title_Label.Name = "Title_Label";
+            this.Title_Label.Size = new System.Drawing.Size(304, 43);
+            this.Title_Label.TabIndex = 0;
+            this.Title_Label.Text = "Facility Booking";
+            this.Title_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Facility_Name_Label
             // 
-            this.Facility_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Facility_Name_Label.Location = new System.Drawing.Point(76, 164);
+            this.Facility_Name_Label.AutoSize = true;
+            this.Facility_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Facility_Name_Label.Location = new System.Drawing.Point(168, 155);
             this.Facility_Name_Label.Name = "Facility_Name_Label";
-            this.Facility_Name_Label.Size = new System.Drawing.Size(132, 23);
-            this.Facility_Name_Label.TabIndex = 1;
+            this.Facility_Name_Label.Size = new System.Drawing.Size(92, 17);
+            this.Facility_Name_Label.TabIndex = 7;
             this.Facility_Name_Label.Text = "Facility Name";
-            this.Facility_Name_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Facility_Name_ComboBox
+            // Facility_ComboBox
             // 
-            this.Facility_Name_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Facility_Name_ComboBox.FormattingEnabled = true;
-            this.Facility_Name_ComboBox.Location = new System.Drawing.Point(205, 164);
-            this.Facility_Name_ComboBox.Name = "Facility_Name_ComboBox";
-            this.Facility_Name_ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.Facility_Name_ComboBox.TabIndex = 2;
+            this.Facility_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Facility_ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Facility_ComboBox.FormattingEnabled = true;
+            this.Facility_ComboBox.Location = new System.Drawing.Point(288, 152);
+            this.Facility_ComboBox.Name = "Facility_ComboBox";
+            this.Facility_ComboBox.Size = new System.Drawing.Size(240, 24);
+            this.Facility_ComboBox.TabIndex = 9;
+            this.Facility_ComboBox.SelectedValueChanged += new System.EventHandler(this.Control_Changed);
             // 
-            // Book_Button
+            // Base_DataGridView
             // 
-            this.Book_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Book_Button.Location = new System.Drawing.Point(205, 362);
-            this.Book_Button.Name = "Book_Button";
-            this.Book_Button.Size = new System.Drawing.Size(120, 40);
-            this.Book_Button.TabIndex = 6;
-            this.Book_Button.Text = "Book";
-            this.Book_Button.UseVisualStyleBackColor = true;
+            this.Base_DataGridView.AllowUserToAddRows = false;
+            this.Base_DataGridView.AllowUserToDeleteRows = false;
+            this.Base_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Base_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Base_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date_Column,
+            this.Timeslot_Column,
+            this.Member_Name_Column,
+            this.Booked_Column,
+            this.Available_Column,
+            this.Member_ID_Column});
+            this.Base_DataGridView.Location = new System.Drawing.Point(40, 232);
+            this.Base_DataGridView.Name = "Base_DataGridView";
+            this.Base_DataGridView.Size = new System.Drawing.Size(632, 272);
+            this.Base_DataGridView.TabIndex = 10;
+            this.Base_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Base_DataGridView_CellClick);
             // 
-            // Booking_Form_Cancel_Button
+            // Date_Column
             // 
-            this.Booking_Form_Cancel_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Booking_Form_Cancel_Button.Location = new System.Drawing.Point(426, 362);
-            this.Booking_Form_Cancel_Button.Name = "Booking_Form_Cancel_Button";
-            this.Booking_Form_Cancel_Button.Size = new System.Drawing.Size(120, 40);
-            this.Booking_Form_Cancel_Button.TabIndex = 7;
-            this.Booking_Form_Cancel_Button.Text = "Cancel";
-            this.Booking_Form_Cancel_Button.UseVisualStyleBackColor = true;
+            this.Date_Column.DataPropertyName = "AvailDate";
+            this.Date_Column.HeaderText = "Date";
+            this.Date_Column.Name = "Date_Column";
+            this.Date_Column.ReadOnly = true;
             // 
-            // MemberID_Label
+            // Timeslot_Column
             // 
-            this.MemberID_Label.AutoSize = true;
-            this.MemberID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberID_Label.Location = new System.Drawing.Point(93, 96);
-            this.MemberID_Label.Name = "MemberID_Label";
-            this.MemberID_Label.Size = new System.Drawing.Size(82, 16);
-            this.MemberID_Label.TabIndex = 8;
-            this.MemberID_Label.Text = "Memeber ID";
+            this.Timeslot_Column.DataPropertyName = "Timeslot";
+            this.Timeslot_Column.HeaderText = "Timeslot";
+            this.Timeslot_Column.Name = "Timeslot_Column";
+            this.Timeslot_Column.ReadOnly = true;
             // 
-            // textBox1
+            // Member_Name_Column
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.Member_Name_Column.HeaderText = "Member Name";
+            this.Member_Name_Column.Name = "Member_Name_Column";
+            this.Member_Name_Column.ReadOnly = true;
             // 
-            // MemberSearch_Button
+            // Booked_Column
             // 
-            this.MemberSearch_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberSearch_Button.Location = new System.Drawing.Point(321, 93);
-            this.MemberSearch_Button.Name = "MemberSearch_Button";
-            this.MemberSearch_Button.Size = new System.Drawing.Size(28, 23);
-            this.MemberSearch_Button.TabIndex = 10;
-            this.MemberSearch_Button.Text = "...";
-            this.MemberSearch_Button.UseVisualStyleBackColor = true;
-            this.MemberSearch_Button.Click += new System.EventHandler(this.button1_Click);
+            this.Booked_Column.DataPropertyName = "Booked";
+            this.Booked_Column.HeaderText = "Booked";
+            this.Booked_Column.Name = "Booked_Column";
+            this.Booked_Column.ReadOnly = true;
+            this.Booked_Column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Booked_Column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // MemberName_TextBox
+            // Available_Column
             // 
-            this.MemberName_TextBox.Location = new System.Drawing.Point(205, 127);
-            this.MemberName_TextBox.Name = "MemberName_TextBox";
-            this.MemberName_TextBox.Size = new System.Drawing.Size(144, 20);
-            this.MemberName_TextBox.TabIndex = 11;
+            this.Available_Column.DataPropertyName = "Available";
+            this.Available_Column.HeaderText = "Available";
+            this.Available_Column.Name = "Available_Column";
+            this.Available_Column.ReadOnly = true;
+            this.Available_Column.Visible = false;
             // 
-            // MemberName_Label
+            // Member_ID_Column
             // 
-            this.MemberName_Label.AutoSize = true;
-            this.MemberName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberName_Label.Location = new System.Drawing.Point(93, 131);
-            this.MemberName_Label.Name = "MemberName_Label";
-            this.MemberName_Label.Size = new System.Drawing.Size(106, 16);
-            this.MemberName_Label.TabIndex = 12;
-            this.MemberName_Label.Text = "Memeber Name";
+            this.Member_ID_Column.DataPropertyName = "MemberID";
+            this.Member_ID_Column.HeaderText = "Member ID";
+            this.Member_ID_Column.Name = "Member_ID_Column";
+            this.Member_ID_Column.ReadOnly = true;
+            this.Member_ID_Column.Visible = false;
             // 
-            // StartTime_ComboBox
+            // Tomorrow_CheckBox
             // 
-            this.StartTime_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.StartTime_ComboBox.FormattingEnabled = true;
-            this.StartTime_ComboBox.Location = new System.Drawing.Point(205, 241);
-            this.StartTime_ComboBox.Name = "StartTime_ComboBox";
-            this.StartTime_ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.StartTime_ComboBox.TabIndex = 13;
+            this.Tomorrow_CheckBox.AutoSize = true;
+            this.Tomorrow_CheckBox.Checked = true;
+            this.Tomorrow_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Tomorrow_CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tomorrow_CheckBox.Location = new System.Drawing.Point(372, 192);
+            this.Tomorrow_CheckBox.Name = "Tomorrow_CheckBox";
+            this.Tomorrow_CheckBox.Size = new System.Drawing.Size(90, 21);
+            this.Tomorrow_CheckBox.TabIndex = 11;
+            this.Tomorrow_CheckBox.Text = "Tomorrow";
+            this.Tomorrow_CheckBox.UseVisualStyleBackColor = true;
+            this.Tomorrow_CheckBox.CheckedChanged += new System.EventHandler(this.Control_Changed);
             // 
-            // EndTime_ComboBox
+            // Today_CheckBox
             // 
-            this.EndTime_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.EndTime_ComboBox.FormattingEnabled = true;
-            this.EndTime_ComboBox.Location = new System.Drawing.Point(455, 241);
-            this.EndTime_ComboBox.Name = "EndTime_ComboBox";
-            this.EndTime_ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.EndTime_ComboBox.TabIndex = 14;
+            this.Today_CheckBox.AutoSize = true;
+            this.Today_CheckBox.Checked = true;
+            this.Today_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Today_CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Today_CheckBox.Location = new System.Drawing.Point(252, 192);
+            this.Today_CheckBox.Name = "Today_CheckBox";
+            this.Today_CheckBox.Size = new System.Drawing.Size(67, 21);
+            this.Today_CheckBox.TabIndex = 12;
+            this.Today_CheckBox.Text = "Today";
+            this.Today_CheckBox.UseVisualStyleBackColor = true;
+            this.Today_CheckBox.CheckedChanged += new System.EventHandler(this.Control_Changed);
             // 
-            // StartTime_Label
+            // Booking_Button
             // 
-            this.StartTime_Label.AutoSize = true;
-            this.StartTime_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartTime_Label.Location = new System.Drawing.Point(96, 248);
-            this.StartTime_Label.Name = "StartTime_Label";
-            this.StartTime_Label.Size = new System.Drawing.Size(69, 16);
-            this.StartTime_Label.TabIndex = 15;
-            this.StartTime_Label.Text = "Start Time";
+            this.Booking_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Booking_Button.Location = new System.Drawing.Point(184, 576);
+            this.Booking_Button.Name = "Booking_Button";
+            this.Booking_Button.Size = new System.Drawing.Size(147, 30);
+            this.Booking_Button.TabIndex = 13;
+            this.Booking_Button.Text = "Make Booking";
+            this.Booking_Button.UseVisualStyleBackColor = true;
+            this.Booking_Button.Click += new System.EventHandler(this.Booking_Button_Click);
             // 
-            // EndTime_Label
+            // Member_Name_Label
             // 
-            this.EndTime_Label.AutoSize = true;
-            this.EndTime_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndTime_Label.Location = new System.Drawing.Point(366, 246);
-            this.EndTime_Label.Name = "EndTime_Label";
-            this.EndTime_Label.Size = new System.Drawing.Size(66, 16);
-            this.EndTime_Label.TabIndex = 16;
-            this.EndTime_Label.Text = "End Time";
+            this.Member_Name_Label.AutoSize = true;
+            this.Member_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Member_Name_Label.Location = new System.Drawing.Point(168, 124);
+            this.Member_Name_Label.Name = "Member_Name_Label";
+            this.Member_Name_Label.Size = new System.Drawing.Size(100, 17);
+            this.Member_Name_Label.TabIndex = 7;
+            this.Member_Name_Label.Text = "Member Name";
+            // 
+            // Member_ID_Label
+            // 
+            this.Member_ID_Label.AutoSize = true;
+            this.Member_ID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Member_ID_Label.Location = new System.Drawing.Point(168, 94);
+            this.Member_ID_Label.Name = "Member_ID_Label";
+            this.Member_ID_Label.Size = new System.Drawing.Size(76, 17);
+            this.Member_ID_Label.TabIndex = 7;
+            this.Member_ID_Label.Text = "Member ID";
+            // 
+            // Member_Name_TextBox
+            // 
+            this.Member_Name_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Member_Name_TextBox.Location = new System.Drawing.Point(288, 120);
+            this.Member_Name_TextBox.MinimumSize = new System.Drawing.Size(4, 30);
+            this.Member_Name_TextBox.Name = "Member_Name_TextBox";
+            this.Member_Name_TextBox.Size = new System.Drawing.Size(240, 23);
+            this.Member_Name_TextBox.TabIndex = 14;
+            // 
+            // Member_ID_TextBox
+            // 
+            this.Member_ID_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Member_ID_TextBox.Location = new System.Drawing.Point(288, 88);
+            this.Member_ID_TextBox.MinimumSize = new System.Drawing.Size(4, 30);
+            this.Member_ID_TextBox.Name = "Member_ID_TextBox";
+            this.Member_ID_TextBox.Size = new System.Drawing.Size(88, 23);
+            this.Member_ID_TextBox.TabIndex = 14;
+            // 
+            // Member_Query_Button
+            // 
+            this.Member_Query_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Member_Query_Button.Location = new System.Drawing.Point(384, 85);
+            this.Member_Query_Button.Name = "Member_Query_Button";
+            this.Member_Query_Button.Size = new System.Drawing.Size(56, 30);
+            this.Member_Query_Button.TabIndex = 13;
+            this.Member_Query_Button.Text = "...";
+            this.Member_Query_Button.UseVisualStyleBackColor = true;
+            // 
+            // Booked_Label
+            // 
+            this.Booked_Label.AutoSize = true;
+            this.Booked_Label.BackColor = System.Drawing.Color.Pink;
+            this.Booked_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Booked_Label.Location = new System.Drawing.Point(264, 512);
+            this.Booked_Label.Name = "Booked_Label";
+            this.Booked_Label.Size = new System.Drawing.Size(56, 16);
+            this.Booked_Label.TabIndex = 15;
+            this.Booked_Label.Text = "Booked";
+            // 
+            // Not_Available_Label
+            // 
+            this.Not_Available_Label.AutoSize = true;
+            this.Not_Available_Label.BackColor = System.Drawing.Color.DarkGray;
+            this.Not_Available_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Not_Available_Label.Location = new System.Drawing.Point(384, 512);
+            this.Not_Available_Label.Name = "Not_Available_Label";
+            this.Not_Available_Label.Size = new System.Drawing.Size(89, 16);
+            this.Not_Available_Label.TabIndex = 15;
+            this.Not_Available_Label.Text = "Not Available";
             // 
             // FacilityBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 428);
-            this.Controls.Add(this.EndTime_Label);
-            this.Controls.Add(this.StartTime_Label);
-            this.Controls.Add(this.EndTime_ComboBox);
-            this.Controls.Add(this.StartTime_ComboBox);
-            this.Controls.Add(this.MemberName_Label);
-            this.Controls.Add(this.MemberName_TextBox);
-            this.Controls.Add(this.MemberSearch_Button);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.MemberID_Label);
-            this.Controls.Add(this.Booking_Form_Cancel_Button);
-            this.Controls.Add(this.Book_Button);
-            this.Controls.Add(this.Facility_Name_ComboBox);
+            this.ClientSize = new System.Drawing.Size(708, 654);
+            this.Controls.Add(this.Not_Available_Label);
+            this.Controls.Add(this.Booked_Label);
+            this.Controls.Add(this.Member_ID_TextBox);
+            this.Controls.Add(this.Member_Name_TextBox);
+            this.Controls.Add(this.Member_Query_Button);
+            this.Controls.Add(this.Booking_Button);
+            this.Controls.Add(this.Tomorrow_CheckBox);
+            this.Controls.Add(this.Today_CheckBox);
+            this.Controls.Add(this.Base_DataGridView);
+            this.Controls.Add(this.Facility_ComboBox);
+            this.Controls.Add(this.Member_ID_Label);
+            this.Controls.Add(this.Member_Name_Label);
             this.Controls.Add(this.Facility_Name_Label);
-            this.Controls.Add(this.Bookingform_Label);
+            this.Controls.Add(this.Title_Label);
             this.Name = "FacilityBookingForm";
-            this.Text = "Booking_Form";
-            this.Controls.SetChildIndex(this.Bookingform_Label, 0);
-            this.Controls.SetChildIndex(this.Facility_Name_Label, 0);
-            this.Controls.SetChildIndex(this.Facility_Name_ComboBox, 0);
-            this.Controls.SetChildIndex(this.Book_Button, 0);
-            this.Controls.SetChildIndex(this.Booking_Form_Cancel_Button, 0);
-            this.Controls.SetChildIndex(this.MemberID_Label, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.MemberSearch_Button, 0);
-            this.Controls.SetChildIndex(this.MemberName_TextBox, 0);
-            this.Controls.SetChildIndex(this.MemberName_Label, 0);
-            this.Controls.SetChildIndex(this.StartTime_ComboBox, 0);
-            this.Controls.SetChildIndex(this.EndTime_ComboBox, 0);
-            this.Controls.SetChildIndex(this.StartTime_Label, 0);
-            this.Controls.SetChildIndex(this.EndTime_Label, 0);
+            this.Text = "Facility Booking";
+            this.Load += new System.EventHandler(this.Control_Changed);
+            this.Controls.SetChildIndex(this.Title_Label, 0);
             this.Controls.SetChildIndex(this.Back_Button, 0);
+            this.Controls.SetChildIndex(this.Facility_Name_Label, 0);
+            this.Controls.SetChildIndex(this.Member_Name_Label, 0);
+            this.Controls.SetChildIndex(this.Member_ID_Label, 0);
+            this.Controls.SetChildIndex(this.Facility_ComboBox, 0);
+            this.Controls.SetChildIndex(this.Base_DataGridView, 0);
+            this.Controls.SetChildIndex(this.Today_CheckBox, 0);
+            this.Controls.SetChildIndex(this.Tomorrow_CheckBox, 0);
+            this.Controls.SetChildIndex(this.Booking_Button, 0);
+            this.Controls.SetChildIndex(this.Member_Query_Button, 0);
+            this.Controls.SetChildIndex(this.Member_Name_TextBox, 0);
+            this.Controls.SetChildIndex(this.Member_ID_TextBox, 0);
+            this.Controls.SetChildIndex(this.Booked_Label, 0);
+            this.Controls.SetChildIndex(this.Not_Available_Label, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.Base_DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,20 +305,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Bookingform_Label;
-        private System.Windows.Forms.Label Facility_Name_Label;
-        private System.Windows.Forms.ComboBox Facility_Name_ComboBox;
-        private System.Windows.Forms.Button Book_Button;
-        private System.Windows.Forms.Button Booking_Form_Cancel_Button;
-        private System.Windows.Forms.Label MemberID_Label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button MemberSearch_Button;
-        private System.Windows.Forms.TextBox MemberName_TextBox;
-        private System.Windows.Forms.Label MemberName_Label;
-        private System.Windows.Forms.ComboBox StartTime_ComboBox;
-        private System.Windows.Forms.ComboBox EndTime_ComboBox;
-        private System.Windows.Forms.Label StartTime_Label;
-        private System.Windows.Forms.Label EndTime_Label;
+        protected System.Windows.Forms.Label Title_Label;
+        protected System.Windows.Forms.Label Facility_Name_Label;
+        protected System.Windows.Forms.ComboBox Facility_ComboBox;
+        protected System.Windows.Forms.DataGridView Base_DataGridView;
+        protected System.Windows.Forms.CheckBox Tomorrow_CheckBox;
+        protected System.Windows.Forms.CheckBox Today_CheckBox;
+        private System.Windows.Forms.Button Booking_Button;
+        protected System.Windows.Forms.Label Member_Name_Label;
+        protected System.Windows.Forms.Label Member_ID_Label;
+        private System.Windows.Forms.TextBox Member_Name_TextBox;
+        private System.Windows.Forms.TextBox Member_ID_TextBox;
+        private System.Windows.Forms.Button Member_Query_Button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Timeslot_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Member_Name_Column;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Booked_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Available_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Member_ID_Column;
+        private System.Windows.Forms.Label Booked_Label;
+        private System.Windows.Forms.Label Not_Available_Label;
     }
 }
 
