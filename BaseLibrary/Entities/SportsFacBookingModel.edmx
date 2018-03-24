@@ -200,7 +200,7 @@
           <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FacilityID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MemberID" Type="Int32" Nullable="false" />
-          <Property Name="TransDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BookedDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="StartTime" Type="Int16" Nullable="false" />
           <Property Name="EndTime" Type="Int16" Nullable="false" />
           <Property Name="Cancelled" Type="Boolean" Nullable="false" />
@@ -346,7 +346,7 @@
                 <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
                 <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
                 <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-                <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+                <ScalarProperty Name="BookedDate" ColumnName="TransDate" />
                 <ScalarProperty Name="StartTime" ColumnName="StartTime" />
                 <ScalarProperty Name="EndTime" ColumnName="EndTime" />
                 <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />

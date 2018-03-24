@@ -23,7 +23,7 @@ namespace BaseLibrary.Entities
         public int TransactionID { get; set; }
         public string FacilityID { get; set; }
         public int MemberID { get; set; }
-        public System.DateTime TransDate { get; set; }
+        public System.DateTime BookedDate { get; set; }
         public short StartTime { get; set; }
         public short EndTime { get; set; }
         public bool Cancelled { get; set; }
