@@ -1,6 +1,6 @@
 ﻿namespace SA46Team05A_Project.Forms
 {
-    partial class FacilityBookingForm
+    partial class BookingForm
     {
         /// <summary>
         /// Required designer variable.

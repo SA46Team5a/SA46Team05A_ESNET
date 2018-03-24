@@ -15,7 +15,7 @@ using BaseLibrary.Entities;
 
 namespace SA46Team05A_Project.Forms
 {
-    public partial class FacilityBookingForm: BaseForm 
+    public partial class BookingForm: BaseForm 
     {
         SportsFacBookingEntities context;
         BindingSource binding;
@@ -23,7 +23,7 @@ namespace SA46Team05A_Project.Forms
         HashSet<DataGridViewRow> selectableTimeslots;
         HashSet<DataGridViewRow> availableTimeslots;
 
-        public FacilityBookingForm(Form caller): base(caller)
+        public BookingForm(Form caller): base(caller)
         {
             InitializeComponent();
             context = new SportsFacBookingEntities();
@@ -44,7 +44,7 @@ namespace SA46Team05A_Project.Forms
             }
         }
         
-        public FacilityBookingForm(Form caller, string facilityName): this(caller)
+        public BookingForm(Form caller, string facilityName): this(caller)
         {
             // Insert value from calling form
             Facility_ComboBox.Text = facilityName;
