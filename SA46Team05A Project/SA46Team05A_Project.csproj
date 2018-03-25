@@ -63,11 +63,11 @@
     <Compile Include="Forms\AppMainMenu.Designer.cs">
       <DependentUpon>AppMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FacilityBookingForm.cs">
+    <Compile Include="Forms\BookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FacilityBookingForm.Designer.cs">
-      <DependentUpon>FacilityBookingForm.cs</DependentUpon>
+    <Compile Include="Forms\BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FacilityCancelForm.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Forms\AppMainMenu.resx">
       <DependentUpon>AppMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FacilityBookingForm.resx">
-      <DependentUpon>FacilityBookingForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FacilityCancelForm.resx">
       <DependentUpon>FacilityCancelForm.cs</DependentUpon>
