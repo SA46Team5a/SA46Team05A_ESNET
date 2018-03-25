@@ -12,7 +12,7 @@ namespace BaseLibrary
 {
     public partial class BaseForm : Form
     {
-        Form caller;
+        protected Form caller;
 
         public BaseForm()
         {
@@ -22,6 +22,12 @@ namespace BaseLibrary
         public BaseForm(Form caller): this()
         {
             this.caller = caller;
+        }
+
+        private void Back_Button_Click(object sender, EventArgs e)
+        {
+            caller.Show();
+            Dispose();
         }
     }
 }
