@@ -46,6 +46,7 @@ namespace SA46Team05A_Project.Forms
         {
             // Constructor for edit mode
             member = m;
+            Create_Membership_Label.Text = "Edit Member's Details";
 
             MemberName_TextBox.ReadOnly = true;
             JoinDate_TextBox.ReadOnly = false;
