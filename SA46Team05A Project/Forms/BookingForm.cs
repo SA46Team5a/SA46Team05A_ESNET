@@ -280,12 +280,19 @@ namespace SA46Team05A_Project.Forms
                             x => x.Facility.FacilityName == Facility_ComboBox.Text
                               && x.Timeslot == startTime
                               && x.AvailDate == date);
+                        timeslot.Transaction = transaction;
                         timeslot.Member = bookingMember;
                         timeslot.Booked = true;
                     }
                     context.SaveChanges();
                 }
             }
+        }
+
+        private void Member_Query_Button_Click(object sender, EventArgs e)
+        {
+            MemberQueryForm f = new MemberQueryForm(this, Member_ID_TextBox, Member_Name_TextBox);
+            f.ShowDialog();
         }
     }
 }

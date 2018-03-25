@@ -237,6 +237,7 @@
             this.Member_Query_Button.TabIndex = 13;
             this.Member_Query_Button.Text = "...";
             this.Member_Query_Button.UseVisualStyleBackColor = true;
+            this.Member_Query_Button.Click += new System.EventHandler(this.Member_Query_Button_Click);
             // 
             // Booked_Label
             // 
@@ -260,7 +261,7 @@
             this.Not_Available_Label.TabIndex = 15;
             this.Not_Available_Label.Text = "Not Available";
             // 
-            // FacilityBookingForm
+            // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,7 +280,7 @@
             this.Controls.Add(this.Member_Name_Label);
             this.Controls.Add(this.Facility_Name_Label);
             this.Controls.Add(this.Title_Label);
-            this.Name = "FacilityBookingForm";
+            this.Name = "BookingForm";
             this.Text = "Facility Booking";
             this.Load += new System.EventHandler(this.FilterValues_Changed);
             this.Controls.SetChildIndex(this.Title_Label, 0);
@@ -314,8 +315,8 @@
         private System.Windows.Forms.Button Booking_Button;
         protected System.Windows.Forms.Label Member_Name_Label;
         protected System.Windows.Forms.Label Member_ID_Label;
-        private System.Windows.Forms.TextBox Member_Name_TextBox;
-        private System.Windows.Forms.TextBox Member_ID_TextBox;
+        public System.Windows.Forms.TextBox Member_Name_TextBox;
+        public System.Windows.Forms.TextBox Member_ID_TextBox;
         private System.Windows.Forms.Button Member_Query_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Timeslot_Column;
