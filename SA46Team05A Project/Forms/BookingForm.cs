@@ -100,15 +100,20 @@ namespace SA46Team05A_Project.Forms
             selectableTimeslots.Clear();
             // Highlight rows above selected row
             int i = row.Index;
-            while (availableTimeslots.Contains(Base_DataGridView.Rows[i]) && i > 0)
+            while (availableTimeslots.Contains(Base_DataGridView.Rows[i]) 
+                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString()
+                   && i > 0)
             {
                 Base_DataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 selectableTimeslots.Add(Base_DataGridView.Rows[i]);
                 i--; 
             }
+
             // Highlight rows below selected row
             i = row.Index;
-            while (availableTimeslots.Contains(Base_DataGridView.Rows[i]) && i > 0)
+            while (availableTimeslots.Contains(Base_DataGridView.Rows[i])
+                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString()
+                   && i < Base_DataGridView.Rows.Count)
             {
                 Base_DataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 selectableTimeslots.Add(Base_DataGridView.Rows[i]);
@@ -132,7 +137,7 @@ namespace SA46Team05A_Project.Forms
             }
         }
 
-        public void CleanUpChanges()
+        public void ClearSelectedTimeslots()
         {
             foreach (DataGridViewRow row in selectedTimeslots)
                 row.Cells["Booked_Column"].Value = false;
@@ -144,10 +149,10 @@ namespace SA46Team05A_Project.Forms
         }
 
         // Event Handlers
-        public void Control_Changed(object sender, EventArgs e)
+        public void FilterValues_Changed(object sender, EventArgs e)
         {
             Status.Text = "";
-            CleanUpChanges();
+            ClearSelectedTimeslots();
 
             if (Facility_ComboBox.Text != "")
             {
@@ -192,25 +197,32 @@ namespace SA46Team05A_Project.Forms
                 DataGridViewRow row = Base_DataGridView.Rows[e.RowIndex];
                 DataGridViewCell cell = row.Cells["Booked_Column"];
 
-                // Update list of selected timeslots
+                // Update hashsets of selected timeslots
                 if ((bool)cell.Value)
                     selectedTimeslots.Remove(row);
                 else
                     selectedTimeslots.Add(row);
 
                 if (selectedTimeslots.Count == 0)
+                {
                     ColorDataGridView();
+                }
                 else if (selectedTimeslots.Count == 1)
                 {
                     HighlightSelectableTimeslots(row);
                     Status.Text = "Please choose a timeslots highlighted in yellow";
                 }
                 else if (selectedTimeslots.Count >= 2 && selectableTimeslots.Contains(row))
+                {
                     FillInBetweenTimeslots();
+                }
                 else if (selectedTimeslots.Count >= 2 && !selectableTimeslots.Contains(row))
+                {
                     selectedTimeslots.Remove(row);
                     Status.Text = "Bookings must be in one continuous session. Please choose timeslots highlighted in yellow";
+                }
 
+                // Update Base_DataGridView based on hashsets
                 foreach (DataGridViewRow r in availableTimeslots)
                 {
                     r.Cells["Booked_Column"].Value = false;

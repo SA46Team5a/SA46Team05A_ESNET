@@ -85,7 +85,7 @@
             this.Facility_ComboBox.Name = "Facility_ComboBox";
             this.Facility_ComboBox.Size = new System.Drawing.Size(240, 24);
             this.Facility_ComboBox.TabIndex = 9;
-            this.Facility_ComboBox.SelectedValueChanged += new System.EventHandler(this.Control_Changed);
+            this.Facility_ComboBox.SelectedValueChanged += new System.EventHandler(this.FilterValues_Changed);
             // 
             // Base_DataGridView
             // 
@@ -163,7 +163,7 @@
             this.Tomorrow_CheckBox.TabIndex = 11;
             this.Tomorrow_CheckBox.Text = "Tomorrow";
             this.Tomorrow_CheckBox.UseVisualStyleBackColor = true;
-            this.Tomorrow_CheckBox.CheckedChanged += new System.EventHandler(this.Control_Changed);
+            this.Tomorrow_CheckBox.CheckedChanged += new System.EventHandler(this.FilterValues_Changed);
             // 
             // Today_CheckBox
             // 
@@ -177,7 +177,7 @@
             this.Today_CheckBox.TabIndex = 12;
             this.Today_CheckBox.Text = "Today";
             this.Today_CheckBox.UseVisualStyleBackColor = true;
-            this.Today_CheckBox.CheckedChanged += new System.EventHandler(this.Control_Changed);
+            this.Today_CheckBox.CheckedChanged += new System.EventHandler(this.FilterValues_Changed);
             // 
             // Booking_Button
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.Title_Label);
             this.Name = "FacilityBookingForm";
             this.Text = "Facility Booking";
-            this.Load += new System.EventHandler(this.Control_Changed);
+            this.Load += new System.EventHandler(this.FilterValues_Changed);
             this.Controls.SetChildIndex(this.Title_Label, 0);
             this.Controls.SetChildIndex(this.Back_Button, 0);
             this.Controls.SetChildIndex(this.Facility_Name_Label, 0);
