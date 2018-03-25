@@ -230,7 +230,7 @@ namespace SA46Team05A_Project.Forms
 
                 foreach (DataGridViewRow r in selectedTimeslots)
                 {
-                        r.Cells["Booked_Column"].Value = true;
+                    r.Cells["Booked_Column"].Value = true;
                 }
             }
         }
@@ -254,6 +254,8 @@ namespace SA46Team05A_Project.Forms
 
                 if (bookingMember is null)
                     Status.Text = String.Format("Member ID {0} cannot be found. Please try another Member ID", MemberIDText);
+                else if (selectedTimeslots.Count == 0)
+                    Status.Text = "Please select a timeslot for a facility";
                 else
                 {
                     // Create transaction object
