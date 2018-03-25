@@ -1,6 +1,6 @@
 ﻿namespace SA46Team05A_Project.Forms
 {
-    partial class MemberCreateForm
+    partial class MemberMaintenanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -194,7 +194,6 @@
             this.MemberName_TextBox.Name = "MemberName_TextBox";
             this.MemberName_TextBox.Size = new System.Drawing.Size(302, 30);
             this.MemberName_TextBox.TabIndex = 14;
-            this.MemberName_TextBox.TextChanged += new System.EventHandler(this.MemberName_TextBox_TextChanged);
             // 
             // PhoneNumber_TextBox
             // 

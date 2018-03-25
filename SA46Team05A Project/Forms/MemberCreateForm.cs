@@ -13,35 +13,15 @@ using SA46Team05A_Project.Entities;
 
 namespace SA46Team05A_Project.Forms
 {
-    public partial class MemberCreateForm : BaseForm
+    public partial class MemberMaintenanceForm : BaseForm
     {
         SportsFacBookingEntities context;
         List<Member> mList;        
         Member member;
 
-
-        public MemberCreateForm()
+        public MemberMaintenanceForm(Form caller) : base(caller)
         {
-            InitializeComponent();
-            context = new SportsFacBookingEntities();
-            member = new Member();
-            GetJoinDate();
-            GetExpiryDate();
-            BirthDay_Date_TextBox.Hide();
-            BirthDay_Month_TextBox.Hide();
-            Birthday_year_Textbox.Hide();
-            Title_TextBox.Hide();
-            JoinDate_TextBox.ReadOnly = true;
-            ExpiryDate_TextBox.ReadOnly = true;
-
-            for (int i = DateTime.Today.Year - 18; i > DateTime.Today.Year - 100; i--)
-            {
-                BirthDate_Year_Combobox.Items.Add(i);
-            }
-        }
-        
-        public MemberCreateForm(Form caller) : base(caller)
-        {
+            // Constructor for create mode
             InitializeComponent();
 
             BirthDay_Date_TextBox.Hide();
@@ -57,11 +37,12 @@ namespace SA46Team05A_Project.Forms
                 BirthDate_Year_Combobox.Items.Add(i);
             }
         }
-        /*
-          public MemberCreateForm(Form caller, Member m) : this(caller)
-          {
-               member = m;
-               
+
+        public MemberMaintenanceForm(Form caller, Member m) : this(caller)
+        {
+            // Constructor for edit mode
+            member = m;
+
             MemberName_TextBox.ReadOnly = true;
             JoinDate_TextBox.ReadOnly = false;
             ExpiryDate_TextBox.ReadOnly = false;
@@ -77,48 +58,32 @@ namespace SA46Team05A_Project.Forms
             BirthDay_Month_TextBox.Show();
             Birthday_year_Textbox.Show();
             Title_TextBox.Show();
-               
 
-
-               Create_Button.Text = "Save";
-               
-           }
-           */
+            Create_Button.Text = "Save";
+        }
 
         // Helper Functions
-
-        
-
-     
-
         public DateTime GetBirthDay()
         {
-
             int day, month, year;
             day = Convert.ToInt32(BirthDate_Date_Combobox.Text);
             month = Convert.ToInt32(BirthDate_Month_Combobox.Text);
             year = Convert.ToInt32(BirthDate_Year_Combobox.Text);
-                      
-    
-             if ((month == 02) && (day == 29))
+
+            if ((month == 02) && (day == 29))
             {
                 MessageBox.Show("Date should not be 29");
             }
-            else
-                    if ((month == 02) && (day == 30))
+            else if ((month == 02) && (day == 30))
             {
                 MessageBox.Show("Date should not be 30");
             }
-            else
-                    if ((month == 02) && (day == 31))
+            else if ((month == 02) && (day == 31))
             {
                 MessageBox.Show("Date should not be 31");
             }
-
             return new DateTime(year, month, day);
-
         }
-
 
         public DateTime GetJoinDate()
         {           
@@ -140,28 +105,17 @@ namespace SA46Team05A_Project.Forms
             expiryyear = (expyears.ToString("dd/MM/yyyy"));            
             ExpiryDate_TextBox.Text= expiryyear;            
             return expyears;
-
         }
+
         public string GetGender()
         {
-
             string value="";
-           // bool rb;
             bool rb=Male_RadioButton.Checked;
 
             if (rb)
-            {
-                value = "M";//Male_RadioButton.Text;
-            }
-
+                value = "M"; //Male_RadioButton.Text;
             else
-               
-            // if(rb==Female_RadioButton.Checked)
-            {
-                value = "F";// Female_RadioButton.Text;
-            }
-
-            //MessageBox.Show(value);
+                value = "F"; // Female_RadioButton.Text;
 
             return value;
         }
@@ -175,7 +129,6 @@ namespace SA46Team05A_Project.Forms
                 MessageBox.Show("Please enter the eight digit phone Number");
                 phoneTextBox = "";
             }
-
             else
             {
                 bool isNumeric = int.TryParse(phoneTextBox, out n);
@@ -195,20 +148,10 @@ namespace SA46Team05A_Project.Forms
                         MessageBox.Show("The first digit of Phone Number should be 9");
                         phoneTextBox = "";
                     }
-               
-                //var q3 = from x in context.Members where x.PhoneNumber == member.PhoneNumber select x;
-                //if (q3.Count() > 0)
-                //{
-                //    MessageBox.Show("Phone Number already exists");
-                //    phoneTextBox = "";                    
-                //}
-
                 }
-
             }
 
             return phoneTextBox;        
-
         }
 
         
@@ -216,44 +159,19 @@ namespace SA46Team05A_Project.Forms
         {
             if (Email_TextBox.Text != "")
             {
-
                 try
                 {
-
                     var eMailValidator = new System.Net.Mail.MailAddress(Email_TextBox.Text);
                 }
-
-                catch (Exception e)
-
-
+                catch (Exception)
                 {
                     MessageBox.Show("Please enter valid EmailID");
                     Email_TextBox.Text = "";
                 }
             }
 
-            //string email = Email_TextBox.Text;
-
-            //string user = email.Substring(0, email.IndexOf("@"));
-            //string domain = email.Substring(email.IndexOf("@") + 1);
-            //string company = string.Empty;
-
-            //if (domain.Contains(".")) //just in case no '.'
-            //{
-            //    company = domain.Substring(0, domain.IndexOf("."));
-            //}
-            //else
-            //{
-            //    company = domain;
-            //}
-
             return Email_TextBox.Text;
         }
-
-      
-
-        
-    
 
         // Event Handlers
         private void MemberCreateForm_Load(object sender, EventArgs e)
@@ -261,17 +179,9 @@ namespace SA46Team05A_Project.Forms
             context = new SportsFacBookingEntities();
         }
 
-        private void MemberName_TextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Create_Button_Click(object sender, EventArgs e)
         {
-
             mList = context.Members.ToList();
-            // Member member = new Member();
-
 
             if (Title_ComboBox.Text == "")
             {
@@ -320,7 +230,6 @@ namespace SA46Team05A_Project.Forms
             }
             else
             {
-
                 member.Salutation = Title_ComboBox.Text;
                 member.MemberName = MemberName_TextBox.Text;
                 member.Birthday = GetBirthDay();
@@ -333,19 +242,6 @@ namespace SA46Team05A_Project.Forms
                 member.JoinDate = GetJoinDate();
                 member.ExpiryDate = GetExpiryDate();
 
-                //var q1 = from x in context.Members where x.MemberID == member.MemberID select x;
-                //var q2 = from x in context.Members where x.MemberName == member.MemberName select x;
-                //var q3 = from x in context.Members where x.PhoneNumber == member.PhoneNumber select x;
-                //var q4 = from x in context.Members where x.Birthday == member.Birthday select x;
-                //var q5 = from x in context.Members where x.EmergencyContactName == member.EmergencyContactName select x;
-                //var q6 = from x in context.Members where x.EmergencyContactPhone == member.EmergencyContactPhone select x;
-                //var q7 = from x in context.Members where x.JoinDate == member.JoinDate select x;
-                //var q8 = from x in context.Members where x.ExpiryDate == member.ExpiryDate select x;
-                //var q9 = from x in context.Members where x.Salutation == member.Salutation select x;
-                //var q10 = from x in context.Members where x.Address == member.Address select x;
-                //var q11 = from x in context.Members where x.Email == member.Email select x;
-                //var q12 = from x in context.Members where x.Sex == member.Sex select x;
-                
                 mList.Add(member);
                 context.Members.Add(member);
                 context.SaveChanges();
@@ -353,15 +249,11 @@ namespace SA46Team05A_Project.Forms
                 MessageBox.Show(member.MemberID.ToString());
 
                 Dispose();
-
-
             }
         }
 
-
         private void Title_ComboBox_TextChanged(object sender, EventArgs e)
         {
-           
             if(Title_ComboBox.Text=="MR")
             {
                 Female_RadioButton.Enabled = false;
@@ -416,4 +308,3 @@ namespace SA46Team05A_Project.Forms
         }
     }
  }
-    
