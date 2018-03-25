@@ -75,23 +75,17 @@
     <Compile Include="Forms\FacilityCancelForm.Designer.cs">
       <DependentUpon>FacilityCancelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MemberCreateForm.cs">
+    <Compile Include="Forms\MemberMaintenanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MemberCreateForm.Designer.cs">
-      <DependentUpon>MemberCreateForm.cs</DependentUpon>
+    <Compile Include="Forms\MemberMaintenanceForm.Designer.cs">
+      <DependentUpon>MemberMaintenanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FacilityCreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FacilityCreateForm.Designer.cs">
       <DependentUpon>FacilityCreateForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MemberEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MemberEditForm.Designer.cs">
-      <DependentUpon>MemberEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BookingCancellationForm.cs">
       <SubType>Form</SubType>
@@ -116,14 +110,11 @@
     <EmbeddedResource Include="Forms\FacilityCancelForm.resx">
       <DependentUpon>FacilityCancelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MemberCreateForm.resx">
-      <DependentUpon>MemberCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MemberMaintenanceForm.resx">
+      <DependentUpon>MemberMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FacilityCreateForm.resx">
       <DependentUpon>FacilityCreateForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MemberEditForm.resx">
-      <DependentUpon>MemberEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookingCancellationForm.resx">
       <DependentUpon>BookingCancellationForm.cs</DependentUpon>
