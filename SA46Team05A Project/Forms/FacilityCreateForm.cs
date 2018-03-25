@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BaseLibrary;
 
-using SA46Team05A_Project.Entities;
+using BaseLibrary.ParentForms;
+using BaseLibrary.Entities;
 
 namespace SA46Team05A_Project.Forms
 {
