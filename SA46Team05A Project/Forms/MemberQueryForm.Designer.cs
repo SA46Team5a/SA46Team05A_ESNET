@@ -39,6 +39,7 @@
             this.Member_Name_TextBox = new System.Windows.Forms.TextBox();
             this.Title_Label = new System.Windows.Forms.Label();
             this.Ok_Button = new System.Windows.Forms.Button();
+            this.Edit_Member_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Search_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,7 +157,21 @@
             this.Ok_Button.TabIndex = 9;
             this.Ok_Button.Text = "Ok";
             this.Ok_Button.UseVisualStyleBackColor = true;
+            this.Ok_Button.Visible = false;
             this.Ok_Button.Click += new System.EventHandler(this.Ok_Click);
+            // 
+            // Edit_Member_Button
+            // 
+            this.Edit_Member_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Edit_Member_Button.Location = new System.Drawing.Point(224, 376);
+            this.Edit_Member_Button.MinimumSize = new System.Drawing.Size(0, 30);
+            this.Edit_Member_Button.Name = "Edit_Member_Button";
+            this.Edit_Member_Button.Size = new System.Drawing.Size(144, 30);
+            this.Edit_Member_Button.TabIndex = 10;
+            this.Edit_Member_Button.Text = "Edit Member Details";
+            this.Edit_Member_Button.UseVisualStyleBackColor = true;
+            this.Edit_Member_Button.Visible = false;
+            this.Edit_Member_Button.Click += new System.EventHandler(this.Edit_Member_Button_Click);
             // 
             // MemberQueryForm
             // 
@@ -169,8 +184,10 @@
             this.Controls.Add(this.LookUpCustomerNameLabel);
             this.Controls.Add(this.Member_ID_Label);
             this.Controls.Add(this.Search_DataGridView);
+            this.Controls.Add(this.Edit_Member_Button);
             this.Name = "MemberQueryForm";
             this.Text = "Member Search";
+            this.Controls.SetChildIndex(this.Edit_Member_Button, 0);
             this.Controls.SetChildIndex(this.Back_Button, 0);
             this.Controls.SetChildIndex(this.Search_DataGridView, 0);
             this.Controls.SetChildIndex(this.Member_ID_Label, 0);
@@ -197,5 +214,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone_Number_Column;
         private System.Windows.Forms.Button Ok_Button;
+        private System.Windows.Forms.Button Edit_Member_Button;
     }
 }

@@ -24,11 +24,14 @@ namespace SA46Team05A_Project.Forms
         {
             // Constructor for create mode
             InitializeComponent();
+            member = new Member();
 
             BirthDay_Date_TextBox.Hide();
             BirthDay_Month_TextBox.Hide();
             Birthday_year_Textbox.Hide();
             Title_TextBox.Hide();
+            JoinDate_TextBox.Text = DateTime.Today.ToString("dd/MM/yyyy");
+            ExpiryDate_TextBox.Text = DateTime.Today.ToString("dd/MM/yyyy");
             JoinDate_TextBox.ReadOnly = true;
             ExpiryDate_TextBox.ReadOnly = true;
          

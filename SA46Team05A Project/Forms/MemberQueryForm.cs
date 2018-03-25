@@ -20,18 +20,29 @@ namespace SA46Team05A_Project.Forms
 
         BindingSource searchBinding;
 
-        public MemberQueryForm(Form caller, TextBox id, TextBox name) : base(caller)
+        public MemberQueryForm(Form caller): base(caller)
         {
+            // Constructor used when calling form is the main menu
             InitializeComponent();
-            context = new SportsFacBookingEntities();
-            idTextBox = id;
-            nameTextBox = name;
+            context = new SportsFacBookingEntities();          
 
             // Prepare Search_DataGridView
             Search_DataGridView.AutoGenerateColumns = false;
             searchBinding = new BindingSource();
             RefreshLookupOutput();
             Search_DataGridView.DataSource = searchBinding;
+
+            Edit_Member_Button.Show();
+        }
+
+        public MemberQueryForm(Form caller, TextBox id, TextBox name) : this(caller)
+        {
+            // Constructor used when calling form needs member details to be filled.
+            idTextBox = id;
+            nameTextBox = name;
+
+            Edit_Member_Button.Hide();
+            Ok_Button.Show();
         }
 
         // Refresh Search_DataGridView
@@ -64,6 +75,24 @@ namespace SA46Team05A_Project.Forms
                 idTextBox.Text = row.Cells["Member_ID_Column"].Value.ToString();
                 nameTextBox.Text = row.Cells["Member_Name_Column"].Value.ToString();
                 Dispose();
+            }
+            else
+            {
+                Status.Text = "Please select one customer, or press Cancel to return to the Loan form";
+            }
+        }
+
+        private void Edit_Member_Button_Click(object sender, EventArgs e)
+        {
+            Status.Text = "";
+            if (!(Search_DataGridView.SelectedCells is null))
+            {
+                DataGridViewRow row = Search_DataGridView.Rows[Search_DataGridView.SelectedCells[0].RowIndex];
+                int memberID = (int)row.Cells["Member_ID_Column"].Value;
+                Member member = context.Members.First(x => x.MemberID == memberID);
+                MemberMaintenanceForm f = new MemberMaintenanceForm(this, member);
+                f.Show();
+                Hide();
             }
             else
             {
