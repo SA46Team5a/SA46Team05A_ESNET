@@ -287,6 +287,14 @@ namespace SA46Team05A_Project.Forms
                         timeslot.Booked = true;
                     }
                     context.SaveChanges();
+
+                    DialogResult checkReceipt = MessageBox.Show("Booking has been made, would you like to see the receipt?", "Check receipt?", MessageBoxButtons.YesNo);
+                    if (checkReceipt == DialogResult.Yes)
+                    {
+                        BookingReceiptForm f = new BookingReceiptForm(transaction.TransactionID);
+                        f.Show();
+                    }
+                    Dispose();                    
                 }
             }
         }

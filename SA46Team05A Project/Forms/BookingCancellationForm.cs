@@ -118,7 +118,10 @@ namespace SA46Team05A_Project.Forms
                 context.SaveChanges();
             }
 
-            Status.Text = String.Format("{0} bookings cancelled", cancelledTransactions.Count());
+            string status = String.Format("{0} bookings of {1} have been cancelled.", cancelledTransactions.Count(), transactions[0].Member.MemberName);
+            MessageBox.Show(status);
+            caller.Show();
+            Dispose();
         }
     }
 }
