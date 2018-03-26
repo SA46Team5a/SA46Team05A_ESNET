@@ -63,6 +63,18 @@
     <Compile Include="Forms\AppMainMenu.Designer.cs">
       <DependentUpon>AppMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FacilityEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FacilityEditForm.Designer.cs">
+      <DependentUpon>FacilityEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FacilityQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FacilityQueryForm.Designer.cs">
+      <DependentUpon>FacilityQueryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +116,13 @@
     <EmbeddedResource Include="Forms\AppMainMenu.resx">
       <DependentUpon>AppMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FacilityEditForm.resx">
+      <DependentUpon>FacilityEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FacilityQueryForm.resx">
+      <DependentUpon>FacilityQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookingForm.resx">
-      <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FacilityCancelForm.resx">
       <DependentUpon>FacilityCancelForm.cs</DependentUpon>
