@@ -89,8 +89,7 @@ namespace SA46Team05A_Project.Forms
             {
                 DataGridViewRow row = Search_DataGridView.Rows[Search_DataGridView.SelectedCells[0].RowIndex];
                 int memberID = (int)row.Cells["Member_ID_Column"].Value;
-                Member member = context.Members.First(x => x.MemberID == memberID);
-                MemberMaintenanceForm f = new MemberMaintenanceForm(this, member);
+                MemberMaintenanceForm f = new MemberMaintenanceForm(this, memberID);
                 f.Show();
                 Hide();
             }
