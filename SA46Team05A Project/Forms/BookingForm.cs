@@ -200,7 +200,7 @@ namespace SA46Team05A_Project.Forms
                 // Update hashsets of selected timeslots
                 if ((bool)cell.Value)
                     selectedTimeslots.Remove(row);
-                else
+                else if (availableTimeslots.Contains(row))
                     selectedTimeslots.Add(row);
 
                 if (selectedTimeslots.Count == 0)
