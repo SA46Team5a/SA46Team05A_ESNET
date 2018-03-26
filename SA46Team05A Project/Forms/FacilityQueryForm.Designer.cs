@@ -59,7 +59,6 @@
             this.FacilityQuery_FacilityName_ComboBox.Name = "FacilityQuery_FacilityName_ComboBox";
             this.FacilityQuery_FacilityName_ComboBox.Size = new System.Drawing.Size(227, 40);
             this.FacilityQuery_FacilityName_ComboBox.TabIndex = 1;
-            this.FacilityQuery_FacilityName_ComboBox.SelectedIndexChanged += new System.EventHandler(this.FacilityQuery_FacilityName_ComboBox_SelectedIndexChanged);
             // 
             // FacilityQuery_Form_Next_Button
             // 
@@ -94,7 +93,6 @@
             this.Controls.Add(this.FacilityQueryForm_FacilityName_Label);
             this.Name = "Facility_Query_Form";
             this.Text = "Facility Query Form";
-            this.Load += new System.EventHandler(this.Facility_Query_Form_Load);
             this.Controls.SetChildIndex(this.FacilityQueryForm_FacilityName_Label, 0);
             this.Controls.SetChildIndex(this.FacilityQuery_FacilityName_ComboBox, 0);
             this.Controls.SetChildIndex(this.FacilityQuery_Form_Next_Button, 0);

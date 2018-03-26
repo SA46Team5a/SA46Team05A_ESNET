@@ -70,13 +70,14 @@ namespace SA46Team05A_Project.Forms
                 || Not_In_Use_Tmr_CheckBox.Checked != tomorrowNotAvailable)
             {
                 MessageBox.Show("Changes have been saved.");
-                Dispose();
             }
             else
             {
-                DialogResult result = MessageBox.Show("No changes have been made, do you wish to change something?", "No changes made", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show
+                    ("No changes have been made, do you wish to change something?", 
+                    "No changes made", MessageBoxButtons.YesNo);
                 if (result == DialogResult.No)
-                    Dispose();
+                    Dispose(); 
             }
         }
     }

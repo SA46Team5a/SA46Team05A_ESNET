@@ -15,7 +15,7 @@ namespace SA46Team05A_Project.Forms
 {
     public partial class Facility_Query_Form : BaseForm
     {
-         SportsFacBookingEntities context = new SportsFacBookingEntities();
+        SportsFacBookingEntities context = new SportsFacBookingEntities();
         public Facility_Query_Form(Form Caller):base(Caller)
         {
            //SportsFacBookingEntities context = new SportsFacBookingEntities();
@@ -25,25 +25,15 @@ namespace SA46Team05A_Project.Forms
                 FacilityQuery_FacilityName_ComboBox.Items.Add(facility);
         }
 
-        private void FacilityQuery_FacilityName_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            //SportsFacBookingEntities context = new SportsFacBookingEntities();
-
-        }
-
         private void FacilityQuery_Form_Next_Button_Click(object sender, EventArgs e)
         {
             //SportsFacBookingEntities context = new SportsFacBookingEntities();
-            var q = from x in context.Facilities where x.FacilityName== FacilityQuery_FacilityName_ComboBox.Text select x;
+            var q = from x in context.Facilities
+                    where x.FacilityName== FacilityQuery_FacilityName_ComboBox.Text select x;
             Facility fc = q.First();
             Facility_Edit_Form editform= new Facility_Edit_Form(this, fc);
             editform.Show();
-        }
-
-        private void Facility_Query_Form_Load(object sender, EventArgs e)
-        {
-
+            Dispose();
         }
     }
 }

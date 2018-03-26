@@ -37,15 +37,15 @@ namespace SA46Team05A_Project.Forms
              
             if ((fNew.FacilityID == "") || (fNew.FacilityName == ""))
             {
-                MessageBox.Show("Please enter data for both the fields");
+                MessageBox.Show("Please enter data for both the fields.");
             }
             else if (q1.Count()>0)
             {
-                MessageBox.Show("Facility ID already exists");
+                MessageBox.Show("Facility ID already exists.");
             }
             else if(q2.Count()>0)
             {
-                MessageBox.Show("Facility Name already exists");
+                MessageBox.Show("Facility Name already exists.");
             }
             else
             { 
@@ -57,6 +57,7 @@ namespace SA46Team05A_Project.Forms
                 caller.Show();
                 Dispose();
             }  
+           
         }
     }
 }
