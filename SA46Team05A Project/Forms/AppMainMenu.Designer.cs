@@ -157,7 +157,7 @@
             this.TransactionReport_button.TabIndex = 7;
             this.TransactionReport_button.Text = "Transaction Report";
             this.TransactionReport_button.UseVisualStyleBackColor = true;
-            this.TransactionReport_button.Click += new System.EventHandler(this.TransactionReport_button_Click);
+            this.TransactionReport_button.Click += new System.EventHandler(this.TransactionReport_Button_Click);
             // 
             // BookingCountByDayReport_Button
             // 

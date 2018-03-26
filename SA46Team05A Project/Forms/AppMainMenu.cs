@@ -61,15 +61,17 @@ namespace SA46Team05A_Project.Forms
 
         private void BookingCountByDayChart_Button_Click(object sender, EventArgs e)
         {
-
+            BookingCountByDayChartForm f = new BookingCountByDayChartForm();
+            f.Show();
         }
 
         private void BookingCountByDayReport_Button_Click(object sender, EventArgs e)
         {
-
+            BookingCountByDayReportForm f = new BookingCountByDayReportForm();
+            f.Show();
         }
 
-        private void TransactionReport_button_Click(object sender, EventArgs e)
+        private void TransactionReport_Button_Click(object sender, EventArgs e)
         {
 
         }

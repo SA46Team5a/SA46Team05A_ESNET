@@ -118,17 +118,17 @@
     <Compile Include="Forms\MemberQueryForm.Designer.cs">
       <DependentUpon>MemberQueryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\AvailabilityByDayChartForm.cs">
+    <Compile Include="Forms\ReportForms\BookingCountByDayChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\AvailabilityByDayChartForm.Designer.cs">
-      <DependentUpon>AvailabilityByDayChartForm.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\BookingCountByDayChartForm.Designer.cs">
+      <DependentUpon>BookingCountByDayChartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\AvailabityByDayCrossTabForm.cs">
+    <Compile Include="Forms\ReportForms\BookingCountByDayReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\AvailabityByDayCrossTabForm.Designer.cs">
-      <DependentUpon>AvailabityByDayCrossTabForm.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\BookingCountByDayReportForm.Designer.cs">
+      <DependentUpon>BookingCountByDayReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\BookingReceiptForm.cs">
       <SubType>Form</SubType>
@@ -136,24 +136,24 @@
     <Compile Include="Forms\ReportForms\BookingReceiptForm.Designer.cs">
       <DependentUpon>BookingReceiptForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\IssueTransactionReportForm.cs">
+    <Compile Include="Forms\ReportForms\TransactionReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\IssueTransactionReportForm.Designer.cs">
-      <DependentUpon>IssueTransactionReportForm.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\TransactionReportForm.Designer.cs">
+      <DependentUpon>TransactionReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\AvailabilityByDayChartReport.cs">
+    <Compile Include="Reports\BookingCountByDayChart.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AvailabilityByDayChartReport.rpt</DependentUpon>
+      <DependentUpon>BookingCountByDayChart.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\AvailabilityByDayCrossTabReport.cs">
+    <Compile Include="Reports\BookingCountByDayReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AvailabilityByDayCrossTabReport.rpt</DependentUpon>
+      <DependentUpon>BookingCountByDayReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\BookingReceipt.cs">
@@ -206,17 +206,17 @@
     <EmbeddedResource Include="Forms\MemberQueryForm.resx">
       <DependentUpon>MemberQueryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\AvailabilityByDayChartForm.resx">
-      <DependentUpon>AvailabilityByDayChartForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\BookingCountByDayChartForm.resx">
+      <DependentUpon>BookingCountByDayChartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\AvailabityByDayCrossTabForm.resx">
-      <DependentUpon>AvailabityByDayCrossTabForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\BookingCountByDayReportForm.resx">
+      <DependentUpon>BookingCountByDayReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\BookingReceiptForm.resx">
       <DependentUpon>BookingReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\IssueTransactionReportForm.resx">
-      <DependentUpon>IssueTransactionReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\TransactionReportForm.resx">
+      <DependentUpon>TransactionReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -227,13 +227,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reports\AvailabilityByDayChartReport.rpt">
+    <EmbeddedResource Include="Reports\BookingCountByDayChart.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AvailabilityByDayChartReport.cs</LastGenOutput>
+      <LastGenOutput>BookingCountByDayChart.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AvailabilityByDayCrossTabReport.rpt">
+    <EmbeddedResource Include="Reports\BookingCountByDayReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AvailabilityByDayCrossTabReport.cs</LastGenOutput>
+      <LastGenOutput>BookingCountByDayReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BookingReceipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

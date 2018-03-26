@@ -1,6 +1,6 @@
-﻿namespace SA46Team05A_Project.Forms.ReportForms
+﻿namespace SA46Team05A_Project
 {
-    partial class IssueTransactionReportForm
+    partial class BookingCountByDayReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,18 +39,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(698, 309);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(721, 504);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // IssueTransactionReportForm
+            // CrossTabForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 309);
+            this.ClientSize = new System.Drawing.Size(721, 504);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "IssueTransactionReportForm";
-            this.Text = "IssueTransactionReportForm";
-            this.Load += new System.EventHandler(this.IssueTransactionReportForm_Load);
+            this.Name = "CrossTabForm";
+            this.Text = "CrossTabForm";
+            this.Load += new System.EventHandler(this.BookingCountByDayReport_Load);
             this.ResumeLayout(false);
 
         }

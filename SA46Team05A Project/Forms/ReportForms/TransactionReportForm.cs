@@ -13,9 +13,9 @@ using SA46Team05A_Project.Reports.Resources.DataSetTransReportTableAdapters;
 
 namespace SA46Team05A_Project.Forms.ReportForms
 {
-    public partial class IssueTransactionReportForm : Form
+    public partial class TransactionReportForm : Form
     {
-        public IssueTransactionReportForm()
+        public TransactionReportForm()
         {
             InitializeComponent();
         }

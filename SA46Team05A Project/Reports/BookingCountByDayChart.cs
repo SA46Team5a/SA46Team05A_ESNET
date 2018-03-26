@@ -16,14 +16,14 @@ namespace SA46Team05A_Project.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class AvailabilityByDayCrossTabReport : ReportClass {
+    public class BookingCountByDayChart : ReportClass {
         
-        public AvailabilityByDayCrossTabReport() {
+        public BookingCountByDayChart() {
         }
         
         public override string ResourceName {
             get {
-                return "AvailabilityByDayCrossTabReport.rpt";
+                return "BookingCountByDayChart.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace SA46Team05A_Project.Reports {
         
         public override string FullResourceName {
             get {
-                return "SA46Team05A_Project.Reports.AvailabilityByDayCrossTabReport.rpt";
+                return "SA46Team05A_Project.Reports.BookingCountByDayChart.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace SA46Team05A_Project.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedAvailabilityByDayCrossTabReport : Component, ICachedReport {
+    public class CachedBookingCountByDayChart : Component, ICachedReport {
         
-        public CachedAvailabilityByDayCrossTabReport() {
+        public CachedBookingCountByDayChart() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace SA46Team05A_Project.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            AvailabilityByDayCrossTabReport rpt = new AvailabilityByDayCrossTabReport();
+            BookingCountByDayChart rpt = new BookingCountByDayChart();
             rpt.Site = this.Site;
             return rpt;
         }

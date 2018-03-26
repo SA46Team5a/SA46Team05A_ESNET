@@ -12,25 +12,25 @@ using SA46Team05A_Project.Reports;
 using SA46Team05A_Project.Reports.Resources;
 using SA46Team05A_Project.Reports.Resources.DataSetCrossTabTableAdapters;
 
-namespace SA46Team05A_Project
+namespace SA46Team05A_Project.Forms
 {
-    public partial class CrossTabForm : Form
+    public partial class BookingCountByDayChartForm : Form
     {
-        public CrossTabForm()
+        public BookingCountByDayChartForm()
         {
             InitializeComponent();
         }
 
-        private void CrossTabForm_Load(object sender, EventArgs e)
+        private void FacilityBookingChartForm_Load(object sender, EventArgs e)
         {
             DataSetCrossTab dsCrossTab = new DataSetCrossTab();
             AvailabilityTableAdapter ta = new AvailabilityTableAdapter();
 
             ta.Fill(dsCrossTab.Availability);
 
-            AvailabilityByDayCrossTabReport crCtab = new AvailabilityByDayCrossTabReport();
-            crCtab.SetDataSource(dsCrossTab);
-            crystalReportViewer1.ReportSource = crCtab;
+            Reports.BookingCountByDayChart crChart = new Reports.BookingCountByDayChart();
+            crChart.SetDataSource(dsCrossTab);
+            crystalReportViewer1.ReportSource = crChart;
         }
     }
 }

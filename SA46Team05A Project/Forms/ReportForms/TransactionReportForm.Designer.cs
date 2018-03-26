@@ -1,6 +1,6 @@
-﻿namespace SA46Team05A_Project.Forms
+﻿namespace SA46Team05A_Project.Forms.ReportForms
 {
-    partial class FacilityBookingChartForm
+    partial class TransactionReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,18 +39,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(731, 470);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(698, 309);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // FacilityBookingChartForm
+            // IssueTransactionReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 470);
+            this.ClientSize = new System.Drawing.Size(698, 309);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "FacilityBookingChartForm";
-            this.Text = "FacilityBookingChartForm";
-            this.Load += new System.EventHandler(this.FacilityBookingChartForm_Load);
+            this.Name = "IssueTransactionReportForm";
+            this.Text = "IssueTransactionReportForm";
+            this.Load += new System.EventHandler(this.IssueTransactionReportForm_Load);
             this.ResumeLayout(false);
 
         }
