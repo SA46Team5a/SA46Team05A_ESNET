@@ -67,6 +67,7 @@
             this.FacilityID_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacilityID_TextBox.Location = new System.Drawing.Point(308, 114);
             this.FacilityID_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.FacilityID_TextBox.MaxLength = 2;
             this.FacilityID_TextBox.Name = "FacilityID_TextBox";
             this.FacilityID_TextBox.Size = new System.Drawing.Size(175, 29);
             this.FacilityID_TextBox.TabIndex = 3;
