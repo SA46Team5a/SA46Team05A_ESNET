@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SA46Team05A_Project.Entities;
-using BaseLibrary;
+
+using BaseLibrary.Entities;
+using BaseLibrary.ParentForms;
 
 namespace SA46Team05A_Project.Forms
 {
@@ -40,7 +41,7 @@ namespace SA46Team05A_Project.Forms
             List<Availability> availability = context.Availability.Where(
                 x => x.Available == false
                 && x.AvailDate == date
-                && x.Facilities.FacilityName == facility.FacilityName)
+                && x.Facility.FacilityName == facility.FacilityName)
                 .ToList();
             if (availability.Count == 0)
                 return false;
@@ -52,7 +53,7 @@ namespace SA46Team05A_Project.Forms
         {
             List<Availability> availability = context.Availability.Where(x => 
                 x.AvailDate == dt 
-                && x.Facilities.FacilityName == facility.FacilityName)
+                && x.Facility.FacilityName == facility.FacilityName)
                 .ToList();
             foreach (Availability a in availability)
                 a.Available = available;
