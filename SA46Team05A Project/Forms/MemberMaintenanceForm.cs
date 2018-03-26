@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseLibrary.ParentForms;
 using BaseLibrary.Entities;
-
+using System.Globalization;
 
 namespace SA46Team05A_Project.Forms
 {
@@ -19,7 +19,7 @@ namespace SA46Team05A_Project.Forms
         List<Member> mList;
         Member member;
         bool create;
-        
+
 
         public MemberMaintenanceForm(Form caller) : base(caller)
         {
@@ -34,11 +34,11 @@ namespace SA46Team05A_Project.Forms
             Title_TextBox.Hide();
             Extend_ExpiryDate_Button.Hide();
             GetJoinDate();
-            GetExpiryDate();           
-            
+            GetExpiryDate();
+
             JoinDate_TextBox.ReadOnly = true;
             ExpiryDate_TextBox.ReadOnly = true;
-         
+
             // Fill birth year combobox
             for (int i = DateTime.Today.Year - 18; i > DateTime.Today.Year - 100; i--)
             {
@@ -49,7 +49,7 @@ namespace SA46Team05A_Project.Forms
         public MemberMaintenanceForm(Form caller, int memberID) : this(caller)
         {
             // Constructor for edit mode
-           
+
             member = context.Members.First(x => x.MemberID == memberID);
             create = false;
 
@@ -67,7 +67,7 @@ namespace SA46Team05A_Project.Forms
             BirthDate_Date_Combobox.Hide();
             BirthDate_Month_Combobox.Hide();
             BirthDate_Year_Combobox.Hide();
-            JoinDate_TextBox.Enabled = false;
+            //JoinDate_TextBox.Enabled = false;
             //Male_RadioButton.Enabled = false;
             //Female_RadioButton.Enabled = false;
             Reset_Button.Hide();
@@ -88,8 +88,8 @@ namespace SA46Team05A_Project.Forms
             Email_TextBox.Text = member.Email;
             Emergency_Contact_Name_TextBox.Text = member.EmergencyContactName;
             Emergency_Contact_Number_TextBox.Text = member.EmergencyContactPhone;
-            PhoneNumber_TextBox.Text = member.PhoneNumber; 
-            if(Title_TextBox.Text=="MR")
+            PhoneNumber_TextBox.Text = member.PhoneNumber;
+            if (Title_TextBox.Text == "MR")
             {
                 Male_RadioButton.Checked = true;
             }
@@ -97,11 +97,11 @@ namespace SA46Team05A_Project.Forms
             {
                 Female_RadioButton.Checked = true;
             }
-            
+
             BirthDay_Date_TextBox.Text = member.Birthday.Day.ToString();
             BirthDate_Date_Combobox.Text = member.Birthday.Day.ToString();
 
-            BirthDay_Month_TextBox.Text = member.Birthday.Month.ToString();           
+            BirthDay_Month_TextBox.Text = member.Birthday.Month.ToString();
             BirthDate_Month_Combobox.Text = member.Birthday.Month.ToString();
 
             Birthday_year_Textbox.Text = member.Birthday.Year.ToString();
@@ -109,42 +109,25 @@ namespace SA46Team05A_Project.Forms
 
             JoinDate_TextBox.Text = member.JoinDate.Date.ToString("dd/MM/yyyy");
             ExpiryDate_TextBox.Text = member.ExpiryDate.Date.ToString("dd/MM/yyyy");
-
-
-
-
-
         }
 
         // Helper Functions
-        public DateTime GetBirthDay()
+        public string GetBirthdayString()
         {
-            int day, month, year;
-            day = Convert.ToInt32(BirthDate_Date_Combobox.Text);
-            month = Convert.ToInt32(BirthDate_Month_Combobox.Text);
-            year = Convert.ToInt32(BirthDate_Year_Combobox.Text);
+            string day, month, year;
+            day = BirthDate_Date_Combobox.Text;
+            month = BirthDate_Month_Combobox.Text;
+            year = BirthDate_Year_Combobox.Text;
+            return String.Format("{0}/{1}/{2}", day, month, year);        
 
-            if ((month == 02) && (day == 29))
-            {
-                MessageBox.Show("Date should not be 29");
-            }
-            else if ((month == 02) && (day == 30))
-            {
-                MessageBox.Show("Date should not be 30");
-            }
-            else if ((month == 02) && (day == 31))
-            {
-                MessageBox.Show("Date should not be 31");
-            }
-            return new DateTime(year, month, day);
         }
 
         public DateTime GetJoinDate()
-        {           
+        {
 
             DateTime join = DateTime.Today;
-            string trimdate = (join.ToString("dd/MM/yyyy"));         
-                      
+            string trimdate = (join.ToString("dd/MM/yyyy"));
+
             JoinDate_TextBox.Text = trimdate;
             return join;
         }
@@ -152,18 +135,18 @@ namespace SA46Team05A_Project.Forms
         public DateTime GetExpiryDate()
         {
             string expiryyear;
-            DateTime expyears=DateTime.Today;            
+            DateTime expyears = DateTime.Today;
             expyears = expyears.AddYears(2);
             expiryyear = Convert.ToString(expyears);
-            expiryyear = (expyears.ToString("dd/MM/yyyy"));            
-            ExpiryDate_TextBox.Text= expiryyear;            
+            expiryyear = (expyears.ToString("dd/MM/yyyy"));
+            ExpiryDate_TextBox.Text = expiryyear;
             return expyears;
         }
 
         public string GetGender()
         {
-            string value="";
-            bool rb=Male_RadioButton.Checked;
+            string value = "";
+            bool rb = Male_RadioButton.Checked;
 
             if (rb)
                 value = "M"; //Male_RadioButton.Text;
@@ -195,7 +178,7 @@ namespace SA46Team05A_Project.Forms
                 {
                     string s = phoneTextBox;
                     string str = s.Substring(0, 1);
-                    int num = Convert.ToInt32(str);                    
+                    int num = Convert.ToInt32(str);
                     if ((num != 9) && (num != 8))
                     {
                         MessageBox.Show("The first digit of Phone Number should be 9");
@@ -204,10 +187,10 @@ namespace SA46Team05A_Project.Forms
                 }
             }
 
-            return phoneTextBox;        
+            return phoneTextBox;
         }
 
-        
+
         public string GetEmailID()
         {
             if (Email_TextBox.Text != "")
@@ -230,7 +213,7 @@ namespace SA46Team05A_Project.Forms
         private void Create_Button_Click(object sender, EventArgs e)
         {
             mList = context.Members.ToList();
-           
+
             if (Title_ComboBox.Text == "")
             {
                 MessageBox.Show("Please Enter the Title");
@@ -262,7 +245,11 @@ namespace SA46Team05A_Project.Forms
             else if (BirthDate_Year_Combobox.Text == "")
             {
                 MessageBox.Show("Please Enter the Birth Year");
-            }            
+            }
+            else if (!DateTime.TryParse(GetBirthdayString(), out DateTime x))
+            {
+                MessageBox.Show("Please enter a valid date for birthday");
+            }
             else if (Address_TextBox.Text == "")
             {
                 MessageBox.Show("Please Enter the Address");
@@ -274,22 +261,22 @@ namespace SA46Team05A_Project.Forms
             else if (PhoneNumber_TextBox.Text == Emergency_Contact_Number_TextBox.Text)
             {
                 MessageBox.Show("Phone Number and Emergency Contact Number should be different");
-                
+
             }
             else
             {
-                member.Salutation =Title_ComboBox.Text;
+                member.Salutation = Title_ComboBox.Text;
                 member.MemberName = MemberName_TextBox.Text;
-                member.Birthday = GetBirthDay();
+                member.Birthday = DateTime.Parse(GetBirthdayString());
                 member.Sex = GetGender();
                 member.PhoneNumber = GetPhoneNumber(PhoneNumber_TextBox.Text);
                 member.Address = Address_TextBox.Text;
-                member.Email = GetEmailID(); 
+                member.Email = GetEmailID();
                 member.EmergencyContactName = Emergency_Contact_Name_TextBox.Text;
                 member.EmergencyContactPhone = GetPhoneNumber(Emergency_Contact_Number_TextBox.Text);
-                member.JoinDate = GetJoinDate();
-                member.ExpiryDate = GetExpiryDate();
-
+                member.JoinDate = DateTime.Parse(JoinDate_TextBox.Text);
+                member.ExpiryDate = DateTime.Parse(ExpiryDate_TextBox.Text);
+                
                 if (create)
                 {
                     mList.Add(member);
@@ -299,7 +286,7 @@ namespace SA46Team05A_Project.Forms
                     MessageBox.Show(member.MemberID.ToString());
                 }
                 else
-                {                                
+                {
                     context.SaveChanges();
                     MessageBox.Show("Member details updated sucessfully");
                 }
@@ -310,7 +297,7 @@ namespace SA46Team05A_Project.Forms
 
         private void Title_ComboBox_TextChanged(object sender, EventArgs e)
         {
-            if(Title_ComboBox.Text=="MR")
+            if (Title_ComboBox.Text == "MR")
             {
                 Female_RadioButton.Enabled = false;
                 Male_RadioButton.Enabled = true;
@@ -326,12 +313,11 @@ namespace SA46Team05A_Project.Forms
 
         private void PhoneNumber_TextBox_Leave(object sender, EventArgs e)
         {
-            string phone=GetPhoneNumber(PhoneNumber_TextBox.Text);
-            if(phone=="")
+            string phone = GetPhoneNumber(PhoneNumber_TextBox.Text);
+            if (phone == "")
             {
                 PhoneNumber_TextBox.Text = "";
             }
-
         }
 
         private void Emergency_Contact_Number_TextBox_Leave(object sender, EventArgs e)
@@ -341,7 +327,7 @@ namespace SA46Team05A_Project.Forms
             {
                 Emergency_Contact_Number_TextBox.Text = "";
             }
-            
+
         }
 
         private void Email_TextBox_Leave(object sender, EventArgs e)
@@ -370,10 +356,34 @@ namespace SA46Team05A_Project.Forms
             if (DateTime.Today < member.ExpiryDate)
                 member.ExpiryDate = member.ExpiryDate.AddYears(2);
             else
+            {
                 member.ExpiryDate = DateTime.Today.AddYears(2);
-
+            }
+            if (DateTime.Today > member.JoinDate)
+            {
+                member.JoinDate = DateTime.Today;
+            }
+            else
+            {
+                member.JoinDate = member.JoinDate;
+            }
+            JoinDate_TextBox.Text = member.JoinDate.ToString("dd/MM/yyyy");
             ExpiryDate_TextBox.Text = member.ExpiryDate.ToString("dd/MM/yyyy");
             Extend_ExpiryDate_Button.Enabled = false;
+
+        }
+
+        private void Birthday_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (BirthDate_Date_Combobox.Text != "" 
+                && BirthDate_Month_Combobox.Text != ""
+                && BirthDate_Year_Combobox.Text != "")
+            {
+                if (!DateTime.TryParseExact(GetBirthdayString(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime x))
+                {
+                    MessageBox.Show("Please enter a valid date for birthday");
+                }
+            }
         }
     }
- }
+}
