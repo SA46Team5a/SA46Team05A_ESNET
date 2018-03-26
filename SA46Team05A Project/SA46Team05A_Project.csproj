@@ -35,17 +35,24 @@
     <Reference Include="BaseLibrary">
       <HintPath>..\BaseLibrary\bin\Debug\BaseLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
       <HintPath>..\BaseLibrary\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\BaseLibrary\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -111,8 +118,68 @@
     <Compile Include="Forms\MemberQueryForm.Designer.cs">
       <DependentUpon>MemberQueryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportForms\AvailabilityByDayChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\AvailabilityByDayChartForm.Designer.cs">
+      <DependentUpon>AvailabilityByDayChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\AvailabityByDayCrossTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\AvailabityByDayCrossTabForm.Designer.cs">
+      <DependentUpon>AvailabityByDayCrossTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\BookingReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\BookingReceiptForm.Designer.cs">
+      <DependentUpon>BookingReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\IssueTransactionReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\IssueTransactionReportForm.Designer.cs">
+      <DependentUpon>IssueTransactionReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AvailabilityByDayChartReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailabilityByDayChartReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AvailabilityByDayCrossTabReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailabilityByDayCrossTabReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BookingReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Resources\BookingDetail.cs" />
+    <Compile Include="Reports\Resources\DataSetCrossTab.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCrossTab.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Resources\DataSetTransReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTransReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Resources\ReceiptQuery.cs" />
+    <Compile Include="Reports\TransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\AppMainMenu.resx">
       <DependentUpon>AppMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +206,18 @@
     <EmbeddedResource Include="Forms\MemberQueryForm.resx">
       <DependentUpon>MemberQueryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\AvailabilityByDayChartForm.resx">
+      <DependentUpon>AvailabilityByDayChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\AvailabityByDayCrossTabForm.resx">
+      <DependentUpon>AvailabityByDayCrossTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\BookingReceiptForm.resx">
+      <DependentUpon>BookingReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\IssueTransactionReportForm.resx">
+      <DependentUpon>IssueTransactionReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +227,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\AvailabilityByDayChartReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AvailabilityByDayChartReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AvailabilityByDayCrossTabReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AvailabilityByDayCrossTabReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BookingReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,15 +253,36 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reports\Resources\DataSetCrossTab.xsc">
+      <DependentUpon>DataSetCrossTab.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Resources\DataSetCrossTab.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCrossTab.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Resources\DataSetCrossTab.xss">
+      <DependentUpon>DataSetCrossTab.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Resources\DataSetTransReport.xsc">
+      <DependentUpon>DataSetTransReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Resources\DataSetTransReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTransReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Resources\DataSetTransReport.xss">
+      <DependentUpon>DataSetTransReport.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
