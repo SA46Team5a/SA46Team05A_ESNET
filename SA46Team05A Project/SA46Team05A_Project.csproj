@@ -88,12 +88,6 @@
     <Compile Include="Forms\BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FacilityCancelForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FacilityCancelForm.Designer.cs">
-      <DependentUpon>FacilityCancelForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\MemberMaintenanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,9 +184,6 @@
       <DependentUpon>FacilityQueryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookingForm.resx">
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FacilityCancelForm.resx">
-      <DependentUpon>FacilityCancelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MemberMaintenanceForm.resx">
       <DependentUpon>MemberMaintenanceForm.cs</DependentUpon>
