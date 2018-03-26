@@ -429,7 +429,7 @@
             // 
             this.Extend_ExpiryDate_Button.Location = new System.Drawing.Point(1050, 480);
             this.Extend_ExpiryDate_Button.Name = "Extend_ExpiryDate_Button";
-            this.Extend_ExpiryDate_Button.Size = new System.Drawing.Size(78, 28);
+            this.Extend_ExpiryDate_Button.Size = new System.Drawing.Size(78, 34);
             this.Extend_ExpiryDate_Button.TabIndex = 35;
             this.Extend_ExpiryDate_Button.Text = "Extend";
             this.Extend_ExpiryDate_Button.UseVisualStyleBackColor = true;

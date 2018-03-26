@@ -66,10 +66,7 @@ namespace SA46Team05A_Project.Forms
             Title_ComboBox.Hide();
             BirthDate_Date_Combobox.Hide();
             BirthDate_Month_Combobox.Hide();
-            BirthDate_Year_Combobox.Hide();
-            //JoinDate_TextBox.Enabled = false;
-            //Male_RadioButton.Enabled = false;
-            //Female_RadioButton.Enabled = false;
+            BirthDate_Year_Combobox.Hide();            
             Reset_Button.Hide();
 
             BirthDay_Date_TextBox.Show();
