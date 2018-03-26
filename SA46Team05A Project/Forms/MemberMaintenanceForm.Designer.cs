@@ -60,17 +60,19 @@
             this.BirthDay_Month_TextBox = new System.Windows.Forms.TextBox();
             this.Birthday_year_Textbox = new System.Windows.Forms.TextBox();
             this.Title_TextBox = new System.Windows.Forms.TextBox();
+            this.Extend_ExpiryDate_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Back_Button
             // 
-            this.Back_Button.Location = new System.Drawing.Point(660, 562);
+            this.Back_Button.Location = new System.Drawing.Point(804, 562);
+            this.Back_Button.Margin = new System.Windows.Forms.Padding(3);
             // 
             // Create_Membership_Label
             // 
             this.Create_Membership_Label.AutoSize = true;
             this.Create_Membership_Label.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create_Membership_Label.Location = new System.Drawing.Point(368, 28);
+            this.Create_Membership_Label.Location = new System.Drawing.Point(396, 28);
             this.Create_Membership_Label.Name = "Create_Membership_Label";
             this.Create_Membership_Label.Size = new System.Drawing.Size(404, 49);
             this.Create_Membership_Label.TabIndex = 0;
@@ -90,7 +92,7 @@
             // 
             this.MemberName_label.AutoSize = true;
             this.MemberName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberName_label.Location = new System.Drawing.Point(553, 165);
+            this.MemberName_label.Location = new System.Drawing.Point(634, 165);
             this.MemberName_label.Name = "MemberName_label";
             this.MemberName_label.Size = new System.Drawing.Size(136, 25);
             this.MemberName_label.TabIndex = 3;
@@ -100,7 +102,7 @@
             // 
             this.Gender_Label.AutoSize = true;
             this.Gender_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender_Label.Location = new System.Drawing.Point(553, 237);
+            this.Gender_Label.Location = new System.Drawing.Point(634, 237);
             this.Gender_Label.Name = "Gender_Label";
             this.Gender_Label.Size = new System.Drawing.Size(77, 25);
             this.Gender_Label.TabIndex = 4;
@@ -120,7 +122,7 @@
             // 
             this.Address_Label.AutoSize = true;
             this.Address_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address_Label.Location = new System.Drawing.Point(553, 356);
+            this.Address_Label.Location = new System.Drawing.Point(634, 355);
             this.Address_Label.Name = "Address_Label";
             this.Address_Label.Size = new System.Drawing.Size(85, 25);
             this.Address_Label.TabIndex = 6;
@@ -130,7 +132,7 @@
             // 
             this.PhoneNumber_Label.AutoSize = true;
             this.PhoneNumber_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber_Label.Location = new System.Drawing.Point(30, 293);
+            this.PhoneNumber_Label.Location = new System.Drawing.Point(30, 292);
             this.PhoneNumber_Label.Name = "PhoneNumber_Label";
             this.PhoneNumber_Label.Size = new System.Drawing.Size(138, 25);
             this.PhoneNumber_Label.TabIndex = 7;
@@ -140,7 +142,7 @@
             // 
             this.Email_ID_Label.AutoSize = true;
             this.Email_ID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_ID_Label.Location = new System.Drawing.Point(553, 297);
+            this.Email_ID_Label.Location = new System.Drawing.Point(634, 297);
             this.Email_ID_Label.Name = "Email_ID_Label";
             this.Email_ID_Label.Size = new System.Drawing.Size(84, 25);
             this.Email_ID_Label.TabIndex = 8;
@@ -160,7 +162,7 @@
             // 
             this.Emergency_Contact_Number_Label.AutoSize = true;
             this.Emergency_Contact_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emergency_Contact_Number_Label.Location = new System.Drawing.Point(30, 416);
+            this.Emergency_Contact_Number_Label.Location = new System.Drawing.Point(30, 415);
             this.Emergency_Contact_Number_Label.Name = "Emergency_Contact_Number_Label";
             this.Emergency_Contact_Number_Label.Size = new System.Drawing.Size(258, 25);
             this.Emergency_Contact_Number_Label.TabIndex = 10;
@@ -170,7 +172,7 @@
             // 
             this.JoinDate_Label.AutoSize = true;
             this.JoinDate_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JoinDate_Label.Location = new System.Drawing.Point(30, 486);
+            this.JoinDate_Label.Location = new System.Drawing.Point(36, 483);
             this.JoinDate_Label.Name = "JoinDate_Label";
             this.JoinDate_Label.Size = new System.Drawing.Size(90, 25);
             this.JoinDate_Label.TabIndex = 11;
@@ -180,7 +182,7 @@
             // 
             this.ExpiryDate_Label.AutoSize = true;
             this.ExpiryDate_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpiryDate_Label.Location = new System.Drawing.Point(553, 487);
+            this.ExpiryDate_Label.Location = new System.Drawing.Point(636, 480);
             this.ExpiryDate_Label.Name = "ExpiryDate_Label";
             this.ExpiryDate_Label.Size = new System.Drawing.Size(107, 25);
             this.ExpiryDate_Label.TabIndex = 12;
@@ -189,7 +191,7 @@
             // MemberName_TextBox
             // 
             this.MemberName_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberName_TextBox.Location = new System.Drawing.Point(711, 164);
+            this.MemberName_TextBox.Location = new System.Drawing.Point(792, 165);
             this.MemberName_TextBox.MaxLength = 40;
             this.MemberName_TextBox.Name = "MemberName_TextBox";
             this.MemberName_TextBox.Size = new System.Drawing.Size(302, 30);
@@ -198,35 +200,35 @@
             // PhoneNumber_TextBox
             // 
             this.PhoneNumber_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber_TextBox.Location = new System.Drawing.Point(296, 293);
+            this.PhoneNumber_TextBox.Location = new System.Drawing.Point(324, 292);
             this.PhoneNumber_TextBox.MaxLength = 8;
             this.PhoneNumber_TextBox.Name = "PhoneNumber_TextBox";
-            this.PhoneNumber_TextBox.Size = new System.Drawing.Size(251, 30);
+            this.PhoneNumber_TextBox.Size = new System.Drawing.Size(252, 30);
             this.PhoneNumber_TextBox.TabIndex = 15;
             this.PhoneNumber_TextBox.Leave += new System.EventHandler(this.PhoneNumber_TextBox_Leave);
             // 
             // Emergency_Contact_Name_TextBox
             // 
             this.Emergency_Contact_Name_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emergency_Contact_Name_TextBox.Location = new System.Drawing.Point(296, 348);
+            this.Emergency_Contact_Name_TextBox.Location = new System.Drawing.Point(324, 348);
             this.Emergency_Contact_Name_TextBox.MaxLength = 40;
             this.Emergency_Contact_Name_TextBox.Name = "Emergency_Contact_Name_TextBox";
-            this.Emergency_Contact_Name_TextBox.Size = new System.Drawing.Size(251, 30);
+            this.Emergency_Contact_Name_TextBox.Size = new System.Drawing.Size(252, 30);
             this.Emergency_Contact_Name_TextBox.TabIndex = 16;
             // 
             // Address_TextBox
             // 
             this.Address_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address_TextBox.Location = new System.Drawing.Point(711, 352);
+            this.Address_TextBox.Location = new System.Drawing.Point(792, 352);
             this.Address_TextBox.Multiline = true;
             this.Address_TextBox.Name = "Address_TextBox";
-            this.Address_TextBox.Size = new System.Drawing.Size(302, 94);
+            this.Address_TextBox.Size = new System.Drawing.Size(302, 93);
             this.Address_TextBox.TabIndex = 17;
             // 
             // Email_TextBox
             // 
             this.Email_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_TextBox.Location = new System.Drawing.Point(711, 296);
+            this.Email_TextBox.Location = new System.Drawing.Point(792, 295);
             this.Email_TextBox.Name = "Email_TextBox";
             this.Email_TextBox.Size = new System.Drawing.Size(302, 30);
             this.Email_TextBox.TabIndex = 18;
@@ -235,10 +237,10 @@
             // Emergency_Contact_Number_TextBox
             // 
             this.Emergency_Contact_Number_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emergency_Contact_Number_TextBox.Location = new System.Drawing.Point(313, 411);
+            this.Emergency_Contact_Number_TextBox.Location = new System.Drawing.Point(324, 411);
             this.Emergency_Contact_Number_TextBox.MaxLength = 8;
             this.Emergency_Contact_Number_TextBox.Name = "Emergency_Contact_Number_TextBox";
-            this.Emergency_Contact_Number_TextBox.Size = new System.Drawing.Size(234, 30);
+            this.Emergency_Contact_Number_TextBox.Size = new System.Drawing.Size(252, 30);
             this.Emergency_Contact_Number_TextBox.TabIndex = 19;
             this.Emergency_Contact_Number_TextBox.Leave += new System.EventHandler(this.Emergency_Contact_Number_TextBox_Leave);
             // 
@@ -249,11 +251,12 @@
             this.Title_ComboBox.FormattingEnabled = true;
             this.Title_ComboBox.Items.AddRange(new object[] {
             "MR",
+            "MS",
             "MRS",
             "MISS"});
-            this.Title_ComboBox.Location = new System.Drawing.Point(296, 157);
+            this.Title_ComboBox.Location = new System.Drawing.Point(324, 157);
             this.Title_ComboBox.Name = "Title_ComboBox";
-            this.Title_ComboBox.Size = new System.Drawing.Size(239, 33);
+            this.Title_ComboBox.Size = new System.Drawing.Size(240, 33);
             this.Title_ComboBox.TabIndex = 22;
             this.Title_ComboBox.TextChanged += new System.EventHandler(this.Title_ComboBox_TextChanged);
             // 
@@ -261,7 +264,7 @@
             // 
             this.Male_RadioButton.AutoSize = true;
             this.Male_RadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Male_RadioButton.Location = new System.Drawing.Point(718, 237);
+            this.Male_RadioButton.Location = new System.Drawing.Point(800, 237);
             this.Male_RadioButton.Name = "Male_RadioButton";
             this.Male_RadioButton.Size = new System.Drawing.Size(80, 29);
             this.Male_RadioButton.TabIndex = 23;
@@ -273,7 +276,7 @@
             // 
             this.Female_RadioButton.AutoSize = true;
             this.Female_RadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Female_RadioButton.Location = new System.Drawing.Point(865, 234);
+            this.Female_RadioButton.Location = new System.Drawing.Point(946, 234);
             this.Female_RadioButton.Name = "Female_RadioButton";
             this.Female_RadioButton.Size = new System.Drawing.Size(102, 29);
             this.Female_RadioButton.TabIndex = 24;
@@ -283,8 +286,8 @@
             // 
             // Create_Button
             // 
-            this.Create_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create_Button.Location = new System.Drawing.Point(139, 562);
+            this.Create_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Create_Button.Location = new System.Drawing.Point(284, 562);
             this.Create_Button.Name = "Create_Button";
             this.Create_Button.Size = new System.Drawing.Size(183, 45);
             this.Create_Button.TabIndex = 26;
@@ -294,8 +297,8 @@
             // 
             // Reset_Button
             // 
-            this.Reset_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reset_Button.Location = new System.Drawing.Point(418, 562);
+            this.Reset_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Reset_Button.Location = new System.Drawing.Point(562, 562);
             this.Reset_Button.Name = "Reset_Button";
             this.Reset_Button.Size = new System.Drawing.Size(152, 45);
             this.Reset_Button.TabIndex = 27;
@@ -308,15 +311,15 @@
             this.BirthDate_Date_Combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BirthDate_Date_Combobox.FormattingEnabled = true;
             this.BirthDate_Date_Combobox.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
             "10",
             "11",
             "12",
@@ -339,9 +342,9 @@
             "29",
             "30",
             "31"});
-            this.BirthDate_Date_Combobox.Location = new System.Drawing.Point(296, 234);
+            this.BirthDate_Date_Combobox.Location = new System.Drawing.Point(324, 234);
             this.BirthDate_Date_Combobox.Name = "BirthDate_Date_Combobox";
-            this.BirthDate_Date_Combobox.Size = new System.Drawing.Size(57, 28);
+            this.BirthDate_Date_Combobox.Size = new System.Drawing.Size(56, 28);
             this.BirthDate_Date_Combobox.TabIndex = 28;
             // 
             // BirthDate_Month_Combobox
@@ -349,21 +352,21 @@
             this.BirthDate_Month_Combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BirthDate_Month_Combobox.FormattingEnabled = true;
             this.BirthDate_Month_Combobox.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
             "10",
             "11",
             "12"});
-            this.BirthDate_Month_Combobox.Location = new System.Drawing.Point(359, 234);
+            this.BirthDate_Month_Combobox.Location = new System.Drawing.Point(387, 234);
             this.BirthDate_Month_Combobox.Name = "BirthDate_Month_Combobox";
-            this.BirthDate_Month_Combobox.Size = new System.Drawing.Size(53, 28);
+            this.BirthDate_Month_Combobox.Size = new System.Drawing.Size(54, 28);
             this.BirthDate_Month_Combobox.TabIndex = 29;
             // 
             // BirthDate_Year_Combobox
@@ -375,58 +378,69 @@
             "1971",
             "1972",
             "1973"});
-            this.BirthDate_Year_Combobox.Location = new System.Drawing.Point(418, 234);
+            this.BirthDate_Year_Combobox.Location = new System.Drawing.Point(447, 234);
             this.BirthDate_Year_Combobox.Name = "BirthDate_Year_Combobox";
-            this.BirthDate_Year_Combobox.Size = new System.Drawing.Size(101, 28);
+            this.BirthDate_Year_Combobox.Size = new System.Drawing.Size(102, 28);
             this.BirthDate_Year_Combobox.TabIndex = 30;
             // 
             // JoinDate_TextBox
             // 
-            this.JoinDate_TextBox.Location = new System.Drawing.Point(296, 494);
+            this.JoinDate_TextBox.Location = new System.Drawing.Point(324, 480);
             this.JoinDate_TextBox.Name = "JoinDate_TextBox";
-            this.JoinDate_TextBox.Size = new System.Drawing.Size(251, 26);
+            this.JoinDate_TextBox.Size = new System.Drawing.Size(252, 26);
             this.JoinDate_TextBox.TabIndex = 31;
             // 
             // ExpiryDate_TextBox
             // 
-            this.ExpiryDate_TextBox.Location = new System.Drawing.Point(711, 486);
+            this.ExpiryDate_TextBox.Location = new System.Drawing.Point(792, 480);
             this.ExpiryDate_TextBox.Name = "ExpiryDate_TextBox";
-            this.ExpiryDate_TextBox.Size = new System.Drawing.Size(251, 26);
+            this.ExpiryDate_TextBox.Size = new System.Drawing.Size(252, 26);
             this.ExpiryDate_TextBox.TabIndex = 32;
             // 
             // BirthDay_Date_TextBox
             // 
-            this.BirthDay_Date_TextBox.Location = new System.Drawing.Point(296, 222);
+            this.BirthDay_Date_TextBox.Location = new System.Drawing.Point(324, 222);
             this.BirthDay_Date_TextBox.Name = "BirthDay_Date_TextBox";
-            this.BirthDay_Date_TextBox.Size = new System.Drawing.Size(57, 26);
+            this.BirthDay_Date_TextBox.Size = new System.Drawing.Size(56, 26);
             this.BirthDay_Date_TextBox.TabIndex = 33;
             // 
             // BirthDay_Month_TextBox
             // 
-            this.BirthDay_Month_TextBox.Location = new System.Drawing.Point(359, 222);
+            this.BirthDay_Month_TextBox.Location = new System.Drawing.Point(387, 222);
             this.BirthDay_Month_TextBox.Name = "BirthDay_Month_TextBox";
-            this.BirthDay_Month_TextBox.Size = new System.Drawing.Size(57, 26);
+            this.BirthDay_Month_TextBox.Size = new System.Drawing.Size(56, 26);
             this.BirthDay_Month_TextBox.TabIndex = 33;
             // 
             // Birthday_year_Textbox
             // 
-            this.Birthday_year_Textbox.Location = new System.Drawing.Point(418, 222);
+            this.Birthday_year_Textbox.Location = new System.Drawing.Point(447, 222);
             this.Birthday_year_Textbox.Name = "Birthday_year_Textbox";
-            this.Birthday_year_Textbox.Size = new System.Drawing.Size(101, 26);
+            this.Birthday_year_Textbox.Size = new System.Drawing.Size(102, 26);
             this.Birthday_year_Textbox.TabIndex = 33;
             // 
             // Title_TextBox
             // 
-            this.Title_TextBox.Location = new System.Drawing.Point(296, 148);
+            this.Title_TextBox.Location = new System.Drawing.Point(324, 148);
             this.Title_TextBox.Name = "Title_TextBox";
-            this.Title_TextBox.Size = new System.Drawing.Size(239, 26);
+            this.Title_TextBox.Size = new System.Drawing.Size(240, 26);
             this.Title_TextBox.TabIndex = 34;
             // 
-            // MemberCreateForm
+            // Extend_ExpiryDate_Button
+            // 
+            this.Extend_ExpiryDate_Button.Location = new System.Drawing.Point(1050, 480);
+            this.Extend_ExpiryDate_Button.Name = "Extend_ExpiryDate_Button";
+            this.Extend_ExpiryDate_Button.Size = new System.Drawing.Size(78, 28);
+            this.Extend_ExpiryDate_Button.TabIndex = 35;
+            this.Extend_ExpiryDate_Button.Text = "Extend";
+            this.Extend_ExpiryDate_Button.UseVisualStyleBackColor = true;
+            this.Extend_ExpiryDate_Button.Click += new System.EventHandler(this.Extend_ExpiryDate_Button_Click);
+            // 
+            // MemberMaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 653);
+            this.ClientSize = new System.Drawing.Size(1140, 652);
+            this.Controls.Add(this.Extend_ExpiryDate_Button);
             this.Controls.Add(this.Title_TextBox);
             this.Controls.Add(this.Birthday_year_Textbox);
             this.Controls.Add(this.BirthDay_Month_TextBox);
@@ -459,9 +473,9 @@
             this.Controls.Add(this.MemberName_label);
             this.Controls.Add(this.Title_Label);
             this.Controls.Add(this.Create_Membership_Label);
-            this.Name = "MemberCreateForm";
-            this.Text = "Create_Membership_Form";
-            this.Load += new System.EventHandler(this.MemberCreateForm_Load);
+            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Name = "MemberMaintenanceForm";
+            this.Text = "Create Membership Form";
             this.Controls.SetChildIndex(this.Create_Membership_Label, 0);
             this.Controls.SetChildIndex(this.Title_Label, 0);
             this.Controls.SetChildIndex(this.MemberName_label, 0);
@@ -495,6 +509,7 @@
             this.Controls.SetChildIndex(this.BirthDay_Month_TextBox, 0);
             this.Controls.SetChildIndex(this.Birthday_year_Textbox, 0);
             this.Controls.SetChildIndex(this.Title_TextBox, 0);
+            this.Controls.SetChildIndex(this.Extend_ExpiryDate_Button, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,6 +549,7 @@
         private System.Windows.Forms.TextBox BirthDay_Month_TextBox;
         private System.Windows.Forms.TextBox Birthday_year_Textbox;
         private System.Windows.Forms.TextBox Title_TextBox;
+        private System.Windows.Forms.Button Extend_ExpiryDate_Button;
     }
 }
 
