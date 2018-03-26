@@ -280,7 +280,8 @@ namespace SA46Team05A_Project.Forms
                     context.Members.Add(member);
                     context.SaveChanges();
                     MessageBox.Show("Member Created successfully");
-                    MessageBox.Show(member.MemberID.ToString());
+                   string print= String.Format("Member ID is : {0}", member.MemberID);                    
+                    MessageBox.Show(print);
                 }
                 else
                 {
