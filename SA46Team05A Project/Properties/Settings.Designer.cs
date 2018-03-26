@@ -26,7 +26,7 @@ namespace SA46Team05A_Project.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BHATPAVANA;Initial Catalog=\"SA46Team05A Database\";Integrated Security" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=\"SA46Team05A Database\";Integrated Security" +
             "=True")]
         public string SA46Team05A_DatabaseConnectionString {
             get {
