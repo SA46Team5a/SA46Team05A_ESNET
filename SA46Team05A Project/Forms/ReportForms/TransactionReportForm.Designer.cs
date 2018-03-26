@@ -1,4 +1,4 @@
-﻿namespace SA46Team05A_Project.Forms.ReportForms
+﻿namespace SA46Team05A_Project
 {
     partial class TransactionReportForm
     {

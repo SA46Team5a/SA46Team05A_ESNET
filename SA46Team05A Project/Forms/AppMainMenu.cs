@@ -73,7 +73,8 @@ namespace SA46Team05A_Project.Forms
 
         private void TransactionReport_Button_Click(object sender, EventArgs e)
         {
-
+            TransactionReportForm f = new TransactionReportForm();
+            f.Show();
         }
     }
 }
