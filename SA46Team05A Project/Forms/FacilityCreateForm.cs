@@ -23,6 +23,26 @@ namespace SA46Team05A_Project.Forms
             context = new SportsFacBookingEntities();
         }
 
+        private void AddTimeslots(Facility f)
+        {
+            var timeslots = context.Availability.Select(x => x.Timeslot).Distinct().ToList();
+            List<DateTime> todayTmr = new List<DateTime>();
+            todayTmr.Add(DateTime.Today);
+            todayTmr.Add(DateTime.Today.AddDays(1));
+            foreach (DateTime day in todayTmr)
+            {
+                foreach (int timeslot in timeslots)
+                {
+                    Availability a = new Availability();
+                    a.Facility = f;
+                    a.AvailDate = day;
+                    a.Timeslot = (short)timeslot;
+                    a.Available = true;
+                    context.Availability.Add(a);
+                }
+            }
+       }
+
         private void Create_Button_Click(object sender, EventArgs e)
         {
             fList = context.Facilities.ToList();
@@ -51,6 +71,7 @@ namespace SA46Team05A_Project.Forms
             { 
                 fList.Add(fNew);
                 context.Facilities.Add(fNew);
+                AddTimeslots(fNew);
                 context.SaveChanges();
                 MessageBox.Show("New Facility created.");
                 
