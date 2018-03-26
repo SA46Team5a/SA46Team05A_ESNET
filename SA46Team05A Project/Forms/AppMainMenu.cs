@@ -28,5 +28,50 @@ namespace SA46Team05A_Project.Forms
             MemberQueryForm f = new MemberQueryForm(this);
             f.Show();
         }
+
+        private void FacilityQueryForm_Button_Click(object sender, EventArgs e)
+        {
+            Facility_Query_Form f = new Facility_Query_Form(this);
+            f.Show();
+        }
+
+        private void BookingCancellationForm_Button_Click(object sender, EventArgs e)
+        {
+            BookingCancellationForm f = new BookingCancellationForm(this);
+            f.Show();
+        }
+
+        private void MemberQueryForm_Button_Click(object sender, EventArgs e)
+        {
+            MemberQueryForm f = new MemberQueryForm(this);
+            f.Show();
+        }
+
+        private void BookingForm_Button_Click(object sender, EventArgs e)
+        {
+            BookingForm f = new BookingForm(this);
+            f.Show();
+        }
+
+        private void CreateFacilityForm_Button_Click(object sender, EventArgs e)
+        {
+            FacilityCreateForm f = new FacilityCreateForm(this);
+            f.Show();
+        }
+
+        private void BookingCountByDayChart_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BookingCountByDayReport_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TransactionReport_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
