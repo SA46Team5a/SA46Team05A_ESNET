@@ -36,13 +36,13 @@
             // 
             // Back_Button
             // 
-            this.Back_Button.Location = new System.Drawing.Point(280, 358);
+            this.Back_Button.Location = new System.Drawing.Point(344, 252);
             // 
             // FacilityQueryForm_FacilityName_Label
             // 
             this.FacilityQueryForm_FacilityName_Label.AutoSize = true;
             this.FacilityQueryForm_FacilityName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacilityQueryForm_FacilityName_Label.Location = new System.Drawing.Point(197, 89);
+            this.FacilityQueryForm_FacilityName_Label.Location = new System.Drawing.Point(70, 97);
             this.FacilityQueryForm_FacilityName_Label.Name = "FacilityQueryForm_FacilityName_Label";
             this.FacilityQueryForm_FacilityName_Label.Size = new System.Drawing.Size(195, 32);
             this.FacilityQueryForm_FacilityName_Label.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.FacilityQuery_FacilityName_ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacilityQuery_FacilityName_ComboBox.FormattingEnabled = true;
             this.FacilityQuery_FacilityName_ComboBox.ItemHeight = 32;
-            this.FacilityQuery_FacilityName_ComboBox.Location = new System.Drawing.Point(445, 89);
+            this.FacilityQuery_FacilityName_ComboBox.Location = new System.Drawing.Point(318, 97);
             this.FacilityQuery_FacilityName_ComboBox.Name = "FacilityQuery_FacilityName_ComboBox";
             this.FacilityQuery_FacilityName_ComboBox.Size = new System.Drawing.Size(227, 40);
             this.FacilityQuery_FacilityName_ComboBox.TabIndex = 1;
@@ -64,7 +64,7 @@
             // FacilityQuery_Form_Next_Button
             // 
             this.FacilityQuery_Form_Next_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacilityQuery_Form_Next_Button.Location = new System.Drawing.Point(530, 358);
+            this.FacilityQuery_Form_Next_Button.Location = new System.Drawing.Point(153, 252);
             this.FacilityQuery_Form_Next_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FacilityQuery_Form_Next_Button.Name = "FacilityQuery_Form_Next_Button";
             this.FacilityQuery_Form_Next_Button.Size = new System.Drawing.Size(112, 45);
@@ -77,7 +77,7 @@
             // 
             this.FacilityQueryForm_Title_Label.AutoSize = true;
             this.FacilityQueryForm_Title_Label.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacilityQueryForm_Title_Label.Location = new System.Drawing.Point(331, 22);
+            this.FacilityQueryForm_Title_Label.Location = new System.Drawing.Point(204, 30);
             this.FacilityQueryForm_Title_Label.Name = "FacilityQueryForm_Title_Label";
             this.FacilityQueryForm_Title_Label.Size = new System.Drawing.Size(252, 49);
             this.FacilityQueryForm_Title_Label.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 444);
+            this.ClientSize = new System.Drawing.Size(647, 349);
             this.Controls.Add(this.FacilityQueryForm_Title_Label);
             this.Controls.Add(this.FacilityQuery_Form_Next_Button);
             this.Controls.Add(this.FacilityQuery_FacilityName_ComboBox);
