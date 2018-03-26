@@ -33,7 +33,6 @@ namespace SA46Team05A_Project.Forms
             Facility fc = q.First();
             Facility_Edit_Form editform= new Facility_Edit_Form(this, fc);
             editform.Show();
-            Dispose();
         }
     }
 }
