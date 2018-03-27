@@ -100,9 +100,9 @@ namespace SA46Team05A_Project.Forms
             selectableTimeslots.Clear();
             // Highlight rows above selected row
             int i = row.Index;
-            while (availableTimeslots.Contains(Base_DataGridView.Rows[i]) 
-                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString()
-                   && i > 0)
+            while (i >= 0 
+                   && availableTimeslots.Contains(Base_DataGridView.Rows[i]) 
+                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString())
             {
                 Base_DataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 selectableTimeslots.Add(Base_DataGridView.Rows[i]);
@@ -111,10 +111,10 @@ namespace SA46Team05A_Project.Forms
 
             // Highlight rows below selected row
             i = row.Index;
-            while (availableTimeslots.Contains(Base_DataGridView.Rows[i])
-                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString()
-                   && i < Base_DataGridView.Rows.Count)
-            {
+            while (i < Base_DataGridView.Rows.Count
+                   && availableTimeslots.Contains(Base_DataGridView.Rows[i])
+                   && Base_DataGridView.Rows[i].Cells["Date_Column"].Value.ToString() == row.Cells["Date_Column"].Value.ToString())
+                {
                 Base_DataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 selectableTimeslots.Add(Base_DataGridView.Rows[i]);
                 i++; 
