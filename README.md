@@ -44,7 +44,7 @@ No special steps required to run the program
 
 ## Database
 ### Setup
-To setup the database, restore the database using the included .bak file. Alternatively, create a blank database named 'SA46Team05A Database' and run the createDB.sh file.
+To setup the database, restore the database using the .bak file in the DatabaseSetup folder. Alternatively, create a blank database named 'SA46Team05A Database' and run the createDB.sh file in the same folder.
 
 ### Metadata
 - Members: All fields are compulsory except for Email
